@@ -1,0 +1,53 @@
+.s-gallery
+  .design-gallery
+    display: flex
+    &-row
+      flex-direction: column
+      flex: 1 0 0
+      &-element
+        align-items: flex-start
+        position: relative
+        &__image
+          width: 100%
+          height: 100%
+          display: block
+        &-link
+          position: relative
+          display: block
+          &__overlay
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            opacity: 0
+            transition: opacity .5s ease
+            color: #ffffff
+            font-size: 14px
+            background-color: rgba(0, 0, 0, .75)
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            padding-top: 10px
+            &:before
+              content: ''
+              width: 22px
+              height: 15px
+              background-image:  url("/image/overlay.svg")
+              background-size: contain
+              position: absolute
+              top: 0
+              right: 0
+              left: 0
+              bottom: 0
+              margin: auto
+            .element-category
+              padding-left: 15px
+              padding-top: 5px
+
+
+
+          &:hover
+            .design-gallery-row-element-link__overlay
+              opacity: 1
+              transition: opacity .5s ease

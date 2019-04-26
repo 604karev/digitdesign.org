@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.sass';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'babel-polyfill';
+import "isomorphic-fetch";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

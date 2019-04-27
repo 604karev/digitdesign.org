@@ -1,3 +1,4 @@
+
 .s-gallery
   .design-gallery
     display: flex
@@ -33,7 +34,7 @@
               content: ''
               width: 22px
               height: 15px
-              background-image:  url("/image/overlay.svg")
+              background-image: url("/image/overlay.svg")
               background-size: contain
               position: absolute
               top: 0
@@ -44,10 +45,34 @@
             .element-category
               padding-left: 15px
               padding-top: 5px
-
-
-
           &:hover
             .design-gallery-row-element-link__overlay
               opacity: 1
               transition: opacity .5s ease
+
+  .img-fluid
+    width: 100%
+  .design-gallery-element
+    width: 100%
+
+@media (min-width: 380px)
+  .s-gallery
+    .design-gallery-element
+      width: 50%
+
+@media (min-width: 768px)
+  .s-gallery
+    .design-gallery-element
+      width: 33.3333%
+
+@media (min-width: 992px)
+  .s-gallery
+    .design-gallery-element
+      width: 25%
+
+@media (min-width: 1200px)
+  .s-gallery
+    .design-gallery-element
+      width: 20%
+
+

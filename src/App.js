@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.sass';
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {applyMiddleware, createStore} from 'redux'
@@ -12,19 +12,20 @@ import Gallery from './containers/Gallery'
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
-const App = () => {
-    const withLayout = Component => props => <Layout> <Component {...props}/> </Layout>
-    return (
-        <BrowserRouter>
-            <Provider store={store}>
-                <Route path='/' component={withLayout(Gallery)}>
+class App extends Component {
+    render() {
+        const withLayout = Component => props => <Layout> <Component {...props}/> </Layout>
+        return (
+            <BrowserRouter>
+                <Provider store={store}>
+                    <Route path='/' component={withLayout(Gallery)}>
+                    </Route>
+                </Provider>
+            </BrowserRouter>
 
-                </Route>
-            </Provider>
-        </BrowserRouter>
 
-
-    );
-};
+        )
+    }
+}
 
 export default App;

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/scss/bootstrap.scss'
 import './index.sass';
 import App from './App';
-
 import 'babel-polyfill';
 import "isomorphic-fetch";
 

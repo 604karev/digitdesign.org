@@ -48,7 +48,8 @@
         .s-nav-bar .nav-bar-list__link.all:before {
           border-bottom: none; }
     .s-nav-bar .nav-bar .icons {
-      justify-content: flex-end; }
+      justify-content: flex-end;
+      z-index: 2; }
       .s-nav-bar .nav-bar .icons .ico-mail, .s-nav-bar .nav-bar .icons .ico-slider {
         display: flex;
         padding: 25px;

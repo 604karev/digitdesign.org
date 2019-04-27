@@ -1,0 +1,70 @@
+.s-gallery .design-gallery {
+  display: flex; }
+  .s-gallery .design-gallery-row {
+    flex-direction: column;
+    flex: 1 0 0; }
+    .s-gallery .design-gallery-row-element {
+      align-items: flex-start;
+      position: relative; }
+      .s-gallery .design-gallery-row-element__image {
+        width: 100%;
+        height: 100%;
+        display: block; }
+      .s-gallery .design-gallery-row-element-link {
+        position: relative;
+        display: block; }
+        .s-gallery .design-gallery-row-element-link__overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          transition: opacity .5s ease;
+          color: #ffffff;
+          font-size: 14px;
+          background-color: rgba(0, 0, 0, 0.75);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 10px; }
+          .s-gallery .design-gallery-row-element-link__overlay:before {
+            content: '';
+            width: 22px;
+            height: 15px;
+            background-image: url("/image/overlay.svg");
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto; }
+          .s-gallery .design-gallery-row-element-link__overlay .element-category {
+            padding-left: 15px;
+            padding-top: 5px; }
+        .s-gallery .design-gallery-row-element-link:hover .design-gallery-row-element-link__overlay {
+          opacity: 1;
+          transition: opacity .5s ease; }
+
+.s-gallery .img-fluid {
+  width: 100%; }
+
+.s-gallery .design-gallery-element {
+  width: 100%; }
+
+@media (min-width: 380px) {
+  .s-gallery .design-gallery-element {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .s-gallery .design-gallery-element {
+    width: 33.3333%; } }
+
+@media (min-width: 992px) {
+  .s-gallery .design-gallery-element {
+    width: 25%; } }
+
+@media (min-width: 1200px) {
+  .s-gallery .design-gallery-element {
+    width: 20%; } }

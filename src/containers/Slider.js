@@ -47,7 +47,7 @@ class Slider extends Component {
 }
 
 const mapStateToProps = state => ({
-    portfolioItem: getGalleryItemById(state, state.portfolioId.id)
+    portfolioItem: getGalleryItemById(state, state.galleryPageId.id)
 });
 const mapDispatchToProps = {
     fetchItemById

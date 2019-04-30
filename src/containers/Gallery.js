@@ -45,11 +45,11 @@ class Gallery extends Component {
     render() {
 
         const {gallery} = this.props;
-        console.log(gallery)
+
         return (
             <Masonry
                 className="design-gallery">
-                {gallery.map((array, index) => this.renderGallery(array, index))}
+                {R.reverse(gallery.map((array, index) => this.renderGallery(array, index)))}
             </Masonry>
         )
 

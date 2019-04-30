@@ -1,9 +1,6 @@
 import * as R from 'ramda'
 
-export const getGalleryItemById = (state, id) => {
-    console.log(state, id)
- return   R.prop(id, state.gallery)
-};
+export const getGalleryItemById = (state, id) => R.prop(id, state.gallery);
 
 export const getGallery = (state, ownProps) => {
     const activeCategory = getActiveCategory(ownProps);
@@ -16,9 +13,9 @@ export const getGallery = (state, ownProps) => {
     );
     return R.compose(
         R.when(R.always(activeCategory), R.filter(applyCategory)),
+        R.map(id => getGalleryItemById(state, id)),
         R.reverse,
-        R.values,
-    )(state.gallery)
+    )(state.galleryPage.ids)
 };
 
 export const getActiveCategory = ownProps => {

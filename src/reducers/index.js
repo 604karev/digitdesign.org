@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
+import galleryPage from './galleryPage'
+import galleryPageId from './galleryPageId'
 import gallery from './gallery'
-import portfolioId from './portfolioId'
 
 export default combineReducers({
     gallery,
-    portfolioId
+    galleryPageId,
+    galleryPage
 })

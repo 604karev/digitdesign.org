@@ -1,6 +1,6 @@
 import React from 'react'
-import NavigationLayout from "../components/NavigationLayout";
-import Navigation from "../components/NavigationLinks";
+import NavigationLayout from '../components/NavigationLayout';
+import Navigation from '../components/NavigationLinks';
 
 
 const Layout = ({children}) => {

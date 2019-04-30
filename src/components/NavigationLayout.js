@@ -7,7 +7,7 @@ const NavigationLayout = ({children}) => (
         <div className="container">
             <div className="row">
                 <nav className="nav-bar relative">
-                    <div className="col-sm-3 col-md-12">
+                    <div className="col-md-12">
                         <NavigationButtons/>
                         {children}
                     </div>

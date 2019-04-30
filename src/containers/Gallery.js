@@ -5,7 +5,7 @@ import * as R from 'ramda'
 import {Link} from 'react-router-dom'
 import './Gallery.sass'
 import Masonry from 'react-masonry-component';
-
+import {getGallery} from '../selectors';
 
 
 class Gallery extends Component {
@@ -15,37 +15,27 @@ class Gallery extends Component {
         this.props.fetchGallery();
 
     };
+    replaceSymbols = item =>
+        <span className="element-category" key={item}>
+            {`#${R.compose(
+                R.replace(/^./, R.toUpper),
+                R.replace('-', ' ',))(item)}`}
+                </span>;
+
 
     renderGallery = (item, index) => {
         return (
             <div key={index} className="design-gallery-element">
                 <Link
                     className="design-gallery-row-element-link"
-                    to={`/${item.category[0]}/${item.id}`}>
+                    to={`/${item.categoryLink}/${item.id}`}>
                     <img
                         className="img-fluid"
                         src={item.img}
                         alt={item.img}/>
                     <span className="design-gallery-row-element-link__overlay">
-                          {item.category.map(
-                              (categoryEl, index) => {
-                                  return (
-                                      categoryEl === 'web-design' ?
-                                          <span
-                                              key={index}
-                                              className="element-category">#Web design</span> : categoryEl === 'mobile' ?
-                                          <span key={index}
-                                                className="element-category">#Mobile</span> : categoryEl === 'art' ?
-                                              <span key={index}
-                                                    className="element-category">#Art</span> : categoryEl === 'icons' ?
-                                                  <span key={index}
-                                                        className="element-category">#Icons</span> : categoryEl === 'identity' ?
-                                                      <span key={index}
-                                                            className="element-category">#Identity</span> : null
-
-                                  )
-                              })}
-                      </span>
+                           {R.map(this.replaceSymbols, item.category)}
+                    </span>
                 </Link>
             </div>
         )
@@ -53,11 +43,12 @@ class Gallery extends Component {
 
 
     render() {
+
         const {gallery} = this.props;
+        console.log(gallery)
         return (
-
-
-            <Masonry className="design-gallery" >
+            <Masonry
+                className="design-gallery">
                 {gallery.map((array, index) => this.renderGallery(array, index))}
             </Masonry>
         )
@@ -65,8 +56,8 @@ class Gallery extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    gallery: R.reverse(R.values(state.gallery))
+const mapStateToProps = (state, ownProps) => ({
+    gallery: getGallery(state, ownProps)
 });
 
 const mapDispatchToProps = {

@@ -10,11 +10,11 @@ import {getGallery} from '../selectors';
 
 class Gallery extends Component {
 
-
     componentDidMount = () => {
         this.props.fetchGallery();
 
     };
+
     replaceSymbols = item =>
         <span className="element-category" key={item}>
             {`#${R.compose(
@@ -43,21 +43,19 @@ class Gallery extends Component {
 
 
     render() {
-
         const {gallery} = this.props;
-
         return (
             <Masonry
                 className="design-gallery">
                 {R.reverse(gallery.map((array, index) => this.renderGallery(array, index)))}
             </Masonry>
         )
-
     }
 }
 
+
 const mapStateToProps = (state, ownProps) => ({
-    gallery: getGallery(state, ownProps)
+    gallery: getGallery(state, ownProps),
 });
 
 const mapDispatchToProps = {

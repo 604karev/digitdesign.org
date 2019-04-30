@@ -14,6 +14,7 @@ class Slider extends Component {
         this.props.fetchItemById(this.props.match.params.id)
     };
 
+
     renderPortfolioImages = () => {
         const {portfolioItem} = this.props;
         return portfolioItem.portfolioImg.map(

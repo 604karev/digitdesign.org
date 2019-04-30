@@ -7,20 +7,22 @@ import {fetchGalleryApi, fetchItemByIdApi} from '../api'
 
 export const fetchGallery = () => async dispatch => {
 
-    dispatch({type: FETCH_GALLERY_START});
+    dispatch({type: FETCH_GALLERY_START, isLoading: true});
 
     try {
         const gallery = await fetchGalleryApi();
         dispatch({
             type: FETCH_GALLERY_SUCCESS,
-            payload: gallery
+            payload: gallery,
+            isLoading: false
         })
     }
     catch (err) {
         dispatch({
             type: FETCH_GALLERY_FAILURE,
             payload: err,
-            error: true
+            error: true,
+            isLoading: false
         })
     }
 };

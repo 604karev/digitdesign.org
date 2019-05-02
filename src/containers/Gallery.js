@@ -28,7 +28,7 @@ class Gallery extends Component {
             <div key={index} className="design-gallery-element">
                 <Link
                     className="design-gallery-row-element-link"
-                    to={`/${item.categoryLink}/${item.id}`}>
+                    to={`/slider/${item.id}`}>
                     <img
                         className="img-fluid"
                         src={item.img}
@@ -44,6 +44,7 @@ class Gallery extends Component {
 
     render() {
         const {gallery} = this.props;
+        console.log(gallery)
         return (
             <Masonry
                 className="design-gallery">

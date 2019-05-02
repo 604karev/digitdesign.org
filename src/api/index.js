@@ -8,6 +8,5 @@ export const fetchGalleryApi = async () => {
 export const fetchItemByIdApi = async id => {
     const response = await fetch('../gallery.json');
     const portfolioItem = await response.json();
-    const isEquals = (item, id) => R.equals(R.toString(item.id), id);
-    return R.find(item => isEquals(item, id), portfolioItem);
+    return R.find(R.propEq('id', id), portfolioItem);
 };

@@ -1,2 +1,42 @@
 .carousel-image
   width: 100%
+
+.slick-arrow.slick-next, .slick-arrow.slick-prev
+  position: fixed
+  z-index: 1
+  top: 50%
+  right: 50px
+
+.slick-arrow.slick-prev
+  right: auto
+  left: 50px
+  .container
+    margin-right: 10px
+
+.slick-arrow.slick-next, .slick-arrow.slick-prev
+  &:before, &:after
+    position: absolute
+    top: 0
+    right: 0
+    height: 24px
+    width: 24px
+    content: ''
+    font-size: 50px
+    color: #FFFFFF
+    opacity: 1
+    border-bottom: 2px solid #FFFFFF
+    transform: rotate(45deg)
+    background-image: none
+  &:after
+    transform: rotate(-225deg)
+  &:hover
+    &:before, &:after
+      border-color: #01B68B
+
+.slick-arrow.slick-next
+  &:before
+    transform: rotate(225deg)
+  &:after
+    transform: rotate(-45deg)
+
+

@@ -16,12 +16,16 @@ class Slider extends Component {
         this.props.fetchItemById(Number(this.props.match.params.id))
 
     };
-
+    componentWillUpdate = () => {
+        window.scrollTo(0, 0);
+    };
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.id !== this.props.match.params.id) {
             this.props.fetchItemById(Number(this.props.match.params.id))
         }
+
+
     }
 
 
@@ -33,7 +37,7 @@ class Slider extends Component {
     };
     getSliderId = (currentId) => {
         const {gallery} = this.props;
-        if (currentId >= gallery.length) {
+        if (currentId > gallery.length) {
             currentId = 1
         }
         if (currentId <= 0) {

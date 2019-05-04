@@ -10,7 +10,8 @@ export default (state = initialState,{type, payload}) => {
             return R.merge(state, newValue);
 
         case FETCH_ITEM_BY_ID_SUCCESS:
-            return R.assoc(payload.id, payload, state);
+            const byIdValue = R.indexBy(R.prop('id'), payload);
+            return R.merge(state, byIdValue);
 
         default:
             return state

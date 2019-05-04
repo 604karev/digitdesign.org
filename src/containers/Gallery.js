@@ -8,6 +8,8 @@ import Masonry from 'react-masonry-component';
 import {getGallery} from '../selectors';
 
 
+
+
 class Gallery extends Component {
 
     componentDidMount = () => {

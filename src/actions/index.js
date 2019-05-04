@@ -35,7 +35,8 @@ export const fetchItemById = (id) => async dispatch => {
         const item = await fetchItemByIdApi(id);
         dispatch({
             type: FETCH_ITEM_BY_ID_SUCCESS,
-            payload: item
+            payload: item,
+            id: id
         })
     }
     catch (err) {

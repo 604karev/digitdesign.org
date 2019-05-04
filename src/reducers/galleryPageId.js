@@ -5,10 +5,10 @@ const initialState = {
     id: null
 };
 
-export default (state = initialState, {type, payload}) => {
+export default (state = initialState, {type, payload, id}) => {
     switch (type) {
         case FETCH_ITEM_BY_ID_SUCCESS:
-            return R.merge(state, {id: R.prop('id', payload)});
+            return R.merge(state, {id: id});
 
         default:
             return state

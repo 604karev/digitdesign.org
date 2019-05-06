@@ -6,10 +6,9 @@ import thunk from 'redux-thunk'
 import reducers from './reducers'
 import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 import {Provider} from 'react-redux'
-import Layout from './containers/Layout'
-import Gallery from './containers/Gallery'
-import Slider from './containers/Slider'
-
+import Layout from './containers/Layout/Layout'
+import Gallery from './containers/Gallery/Gallery'
+import SliderWrapper from './containers/Slider/SliderWrapper'
 
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
@@ -17,7 +16,7 @@ const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)))
 class App extends Component {
 
     render() {
-        const withLayout = Component => props => <Layout> <Component {...props}/> </Layout>;
+        const withLayout = Component => props => <Layout store={store}> <Component {...props}/> </Layout>;
 
         return (
             <Router>
@@ -25,7 +24,7 @@ class App extends Component {
                     <Switch>
                         <Route path='/' component={withLayout(Gallery)} exact/>
                         <Route path='/:category' component={withLayout(Gallery)} exact/>
-                        <Route path='/slider/:id' component={Slider} exact/>
+                        <SliderWrapper/>
                     </Switch>
                 </Provider>
             </Router>

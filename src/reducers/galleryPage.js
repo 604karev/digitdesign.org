@@ -2,12 +2,12 @@ import * as R from 'ramda'
 import {FETCH_GALLERY_START, FETCH_GALLERY_SUCCESS} from "../actions/actionsType";
 
 const initialState = {
-    ids:[],
+    ids: [],
     isLoading: false
 };
 
-export default (state = initialState,{type, payload}) => {
-    switch (type){
+export default (state = initialState, {type, payload}) => {
+    switch (type) {
         case FETCH_GALLERY_START:
             return R.merge(state, {
                 ids: [],
@@ -19,7 +19,6 @@ export default (state = initialState,{type, payload}) => {
                 ids: R.pluck('id', payload),
                 isLoading: false
             });
-
 
 
         default:

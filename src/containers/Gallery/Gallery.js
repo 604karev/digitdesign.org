@@ -1,12 +1,11 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchGallery} from '../actions'
+import {fetchGallery} from '../../actions/index'
 import * as R from 'ramda'
 import {Link} from 'react-router-dom'
 import './Gallery.sass'
 import Masonry from 'react-masonry-component';
-import {getGallery} from '../selectors';
-
+import {getGallery} from '../../selectors';
 
 
 
@@ -46,12 +45,14 @@ class Gallery extends Component {
 
     render() {
         const {gallery} = this.props;
-        console.log(gallery)
+
         return (
-            <Masonry
-                className="design-gallery">
-                {R.reverse(gallery.map((array, index) => this.renderGallery(array, index)))}
-            </Masonry>
+
+
+                <Masonry
+                    className="design-gallery">
+                    {R.reverse(gallery.map((array, index) => this.renderGallery(array, index)))}
+                </Masonry>
         )
     }
 }
@@ -59,6 +60,7 @@ class Gallery extends Component {
 
 const mapStateToProps = (state, ownProps) => ({
     gallery: getGallery(state, ownProps),
+
 });
 
 const mapDispatchToProps = {

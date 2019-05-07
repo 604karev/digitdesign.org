@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import Layout from './containers/Layout/Layout'
 import Gallery from './containers/Gallery/Gallery'
-import SliderWrapper from './containers/Slider/SliderWrapper'
+import SliderWrapper from './containers/Slider/Slider'
 
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
@@ -24,7 +24,7 @@ class App extends Component {
                     <Switch>
                         <Route path='/' component={withLayout(Gallery)} exact/>
                         <Route path='/:category' component={withLayout(Gallery)} exact/>
-                        <SliderWrapper/>
+                        <Route path='/slider/:id' component={SliderWrapper} exact/>
                     </Switch>
                 </Provider>
             </Router>

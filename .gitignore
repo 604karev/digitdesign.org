@@ -22,3 +22,4 @@ yarn-debug.log*
 yarn-error.log*
 src/**/*.css
 !/src/fonts/*.css
+!/src/containers/Slider/Slide/*.css

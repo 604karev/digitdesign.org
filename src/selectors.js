@@ -22,6 +22,9 @@ export const getActiveCategory = ownProps => {
     return R.path(['match', 'params', 'category'], ownProps)
 };
 
-
+export const getGalleryLength = state => R.compose(
+    R.length,
+    R.values,
+)(state.gallery);
 
 

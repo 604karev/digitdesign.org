@@ -6,9 +6,6 @@ import './Slider.sass'
 
 
 class Slider extends Component {
-    state = {
-        direction: ''
-    }
 
     componentDidMount = () => {
         this.props.fetchItemById(Number(this.props.match.params.id))

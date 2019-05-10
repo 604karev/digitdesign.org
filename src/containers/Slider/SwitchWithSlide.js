@@ -2,12 +2,12 @@ import React from "react";
 import {Switch, Route} from "react-router-dom";
 import Slider from "./Slide";
 import * as R from 'ramda'
+import {connect} from 'react-redux'
+import {getGalleryLength} from '../../selectors'
 
 class SlideOut extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props)
-
         this.state = {
             childPosition: Slider.CENTER,
             curChild: props.children,
@@ -27,8 +27,13 @@ class SlideOut extends React.Component {
         });
     };
     componentDidUpdate = (prevProps, prevState) => {
-        const prevUniqId = prevProps.uniqKey || prevProps.children.type;
-        const uniqId = this.props.uniqKey || this.props.children.type;
+        const {galleryLength} = this.props;
+        const pathToNumber = (path) => (
+            Number(R.replace('/slider/', '', path))
+        );
+        const prevUniqId = pathToNumber(prevProps.uniqKey) || prevProps.children.type;
+        const uniqId = pathToNumber(this.props.uniqKey) || this.props.children.type;
+
         const setDirectionState = (direction, callback) => {
             this.setState({
                 childPosition: direction,
@@ -39,11 +44,12 @@ class SlideOut extends React.Component {
                 animationCallback: callback
             });
         };
-        if (prevUniqId > uniqId) {
-            console.log(R.replace('/slider/', '', uniqId));
+
+
+        if ((prevUniqId > uniqId && !(prevUniqId === galleryLength && uniqId === 1)) || (prevUniqId === 1 && uniqId === galleryLength)) {
             setDirectionState(Slider.TO_LEFT, () => this.swapChildren(Slider.FROM_RIGHT))
         }
-        if (prevUniqId < uniqId) {
+        if ((prevUniqId < uniqId && !(prevUniqId === 1 && uniqId === galleryLength)) || (prevUniqId === galleryLength && uniqId === 1)) {
             setDirectionState(Slider.TO_RIGHT, () => this.swapChildren(Slider.FROM_LEFT))
         }
     };
@@ -61,10 +67,7 @@ class SlideOut extends React.Component {
     }
 }
 
-const animateSwitch = (CustomSwitch, AnimatorComponent) => ({
-                                                                updateStep,
-                                                                children
-                                                            }) => (
+const animateSwitch = (CustomSwitch, AnimatorComponent) => ({updateStep, children}) => (
     <Route
         render={({location}) => (
             <AnimatorComponent uniqKey={location.pathname} updateStep={updateStep}>
@@ -73,7 +76,10 @@ const animateSwitch = (CustomSwitch, AnimatorComponent) => ({
         )}
     />
 );
+const mapStateToProps = (state) => ({
+    galleryLength: getGalleryLength(state)
+});
+const SwitchWithSlide = animateSwitch(Switch, connect(mapStateToProps)(SlideOut));
 
-const SwitchWithSlide = animateSwitch(Switch, SlideOut);
 
-export default SwitchWithSlide;
+export default connect(mapStateToProps)(SwitchWithSlide);

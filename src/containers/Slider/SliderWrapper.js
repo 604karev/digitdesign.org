@@ -3,20 +3,20 @@ import {Link, Route} from "react-router-dom";
 import Slider from './Slider';
 import './Slider.sass';
 import {connect} from 'react-redux';
-import * as R from 'ramda'
-import {getGalleryItemById} from '../../selectors'
+import {getGalleryItemById, getGalleryLength} from '../../selectors'
 import NavigationLayout from '../../components/Navigation/NavigationLayout';
 import NavigationSlider from '../../components/Navigation/NavigationSlider'
 import SwitchWithSlide from "./SwitchWithSlide";
 
 
-const SliderWrapper = ({location, portfolioItem, gallery}) => {
+
+const SliderWrapper = ({portfolioItem, galleryLength}) => {
     const getSliderId = (currentId) => {
-        if (currentId > gallery.length) {
+        if (currentId > galleryLength) {
             currentId = 1
         }
         if (currentId <= 0) {
-            currentId = gallery.length
+            currentId = galleryLength
         }
         return currentId
     };
@@ -41,7 +41,7 @@ const SliderWrapper = ({location, portfolioItem, gallery}) => {
 };
 const mapStateToProps = (state) => ({
     portfolioItem: getGalleryItemById(state, state.galleryPageId.id),
-    gallery: R.values(state.gallery),
+    galleryLength: getGalleryLength(state),
 
 });
 

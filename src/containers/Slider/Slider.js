@@ -33,8 +33,9 @@ class Slider extends Component {
             <div className="carousel-img-wrapper">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-10 offset-md-1">
+                        <div className="col-md-10 offset-md-1 p-0 px-sm-3">
                             {portfolioItem && (this.renderPortfolioImages())}
+
                         </div>
                     </div>
                 </div>

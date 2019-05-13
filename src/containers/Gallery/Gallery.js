@@ -8,7 +8,6 @@ import Masonry from 'react-masonry-component';
 import {getGallery} from '../../selectors';
 
 
-
 class Gallery extends Component {
 
     componentDidMount = () => {
@@ -22,7 +21,6 @@ class Gallery extends Component {
                 R.replace(/^./, R.toUpper),
                 R.replace('-', ' ',))(item)}`}
                 </span>;
-
 
     renderGallery = (item, index) => {
         return (
@@ -42,17 +40,13 @@ class Gallery extends Component {
         )
     };
 
-
     render() {
         const {gallery} = this.props;
-
         return (
-
-
-                <Masonry
-                    className="design-gallery">
-                    {R.reverse(gallery.map((array, index) => this.renderGallery(array, index)))}
-                </Masonry>
+            <Masonry
+                className="design-gallery">
+                {R.reverse(gallery.map((array, index) => this.renderGallery(array, index)))}
+            </Masonry>
         )
     }
 }

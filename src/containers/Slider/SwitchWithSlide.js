@@ -45,7 +45,6 @@ class SlideOut extends React.Component {
             });
         };
 
-
         if ((prevUniqId > uniqId && !(prevUniqId === galleryLength && uniqId === 1)) || (prevUniqId === 1 && uniqId === galleryLength)) {
             setDirectionState(Slider.TO_LEFT, () => this.swapChildren(Slider.FROM_RIGHT))
         }

@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames/bind";
-import "./styles.css";
+import "./styles.sass";
 
 export default class Slider extends React.Component {
     constructor(props) {

@@ -1,16 +1,16 @@
 import React from "react";
 import {Link, Route} from "react-router-dom";
-import Slider from './Slider';
-import './Slider.sass';
+import Carousel from '../../components/Carousel/Carousel';
 import {connect} from 'react-redux';
 import {getGalleryItemById, getGalleryLength} from '../../selectors'
 import NavigationLayout from '../../components/Navigation/NavigationLayout';
 import NavigationSlider from '../../components/Navigation/NavigationSlider'
-import SwitchWithSlide from "./SwitchWithSlide";
+import SwitchWithSlide from "../../components/Carousel/Slider/SwitchWithSlide";
+import './CarouselWrapper.sass'
 
 
 
-const SliderWrapper = ({portfolioItem, galleryLength}) => {
+const CarouselWrapper = ({portfolioItem, galleryLength}) => {
     const getSliderId = (currentId) => {
         if (currentId > galleryLength) {
             currentId = 1
@@ -28,7 +28,7 @@ const SliderWrapper = ({portfolioItem, galleryLength}) => {
             </NavigationLayout>
             <section>
                 <SwitchWithSlide>
-                    <Route exact path='/slider/:id' component={Slider}/>
+                    <Route exact path='/slider/:id' component={Carousel}/>
                 </SwitchWithSlide>
                 <Link className="slick-arrow slick-next"
                       to={`/slider/${portfolioItem && getSliderId(portfolioItem.id + 1)}`}/>
@@ -45,4 +45,4 @@ const mapStateToProps = (state) => ({
 
 });
 
-export default connect(mapStateToProps)(SliderWrapper)
+export default connect(mapStateToProps)(CarouselWrapper)

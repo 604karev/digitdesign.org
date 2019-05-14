@@ -1,4 +1,5 @@
 import React from 'react'
+import './NavigationButtons.sass'
 
 const NavigationButton = () => (
     <div className="btn-group icons float-right">

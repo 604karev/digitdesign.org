@@ -1,5 +1,6 @@
 import React from 'react'
 import NavigationLinks from './NavigationLinks'
+import './MobileNavigation.sass'
 
 const MobileNavigation = ({openMobileNav, mobileMenuState}) => {
     return (

@@ -2,10 +2,9 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getGalleryItemById} from '../../selectors'
 import {fetchItemById} from '../../actions/index'
-import './Slider.sass'
 
 
-class Slider extends Component {
+class Carousel extends Component {
 
     componentDidMount = () => {
         this.props.fetchItemById(Number(this.props.match.params.id))
@@ -33,7 +32,7 @@ class Slider extends Component {
             <div className="carousel-img-wrapper">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-10 offset-md-1 p-0 px-sm-3">
+                        <div className="col-md-10 offset-md-1">
                             {portfolioItem && (this.renderPortfolioImages())}
 
                         </div>
@@ -54,4 +53,4 @@ const mapDispatchToProps = {
     fetchItemById
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Slider)
+export default connect(mapStateToProps, mapDispatchToProps)(Carousel)

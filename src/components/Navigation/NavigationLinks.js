@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './NavigationLinks.sass'
 
 const NavigationLinks = () => {
     return (

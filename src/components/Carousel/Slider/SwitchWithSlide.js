@@ -1,9 +1,9 @@
 import React from "react";
 import {Switch, Route} from "react-router-dom";
-import Slider from "./Slide";
+import Slider from "./index";
 import * as R from 'ramda'
 import {connect} from 'react-redux'
-import {getGalleryLength} from '../../selectors'
+import {getGalleryLength} from '../../../selectors'
 
 class SlideOut extends React.Component {
     constructor(props) {

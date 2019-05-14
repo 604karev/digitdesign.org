@@ -1,0 +1,43 @@
+.nav-bar
+  &-list
+    position: relative
+    background: #FFFFFF
+    box-sizing: border-box
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1), 0 10px 23px rgba(0, 0, 0, 0.1)
+    display: flex
+    margin: 0
+    padding: 0
+    align-items: center
+    z-index: 2
+    justify-content: center
+  &-logo
+    font-family: "Montserrat", sans-serif
+    font-style: normal
+    font-weight: 900
+    font-size: 42px
+    text-transform: uppercase
+    text-align: left
+    line-height: 37px
+    display: block
+    margin-left: 4px
+    color: #000000
+    &:hover
+      text-decoration: none
+      color: #000000
+
+
+@media screen and (max-width: 768px)
+  .nav-bar
+    &-list
+      flex-direction: column
+      align-items: flex-start
+
+@media (max-width: 1199px)
+  .nav-bar
+    &-logo
+      font-size: 36px
+
+
+
+
+

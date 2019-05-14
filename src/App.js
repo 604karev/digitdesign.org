@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import Layout from './containers/Layout/Layout'
 import Gallery from './containers/Gallery/Gallery'
-import SliderWrapper from './containers/Slider/SliderWrapper'
+import SliderWrapper from './containers/Carousel/CarouselWrapper'
 
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));

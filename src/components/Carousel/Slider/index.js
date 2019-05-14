@@ -73,7 +73,7 @@ export default class Slider extends React.Component {
     };
 
     onTransitionEnd = (e) => {
-        // the Slider transitions the `transform` property. Any other transitions
+        // the Carousel transitions the `transform` property. Any other transitions
         // that occur on the element we can just ignore.
         if (e.propertyName !== "transform") return;
 

@@ -1,482 +1,6 @@
 [
   {
-    "img": "./image/index/cp_i.png",
-    "id": "41",
-    "category": [
-      "mobile",
-      "web-design"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/cp01.png",
-      "../image/carousel/cp02.gif",
-      "../image/carousel/cp03.png",
-      "../image/carousel/cp04.png",
-      "../image/carousel/cp05.png",
-      "../image/carousel/cp06.png",
-      "../image/carousel/cp07.png",
-      "../image/carousel/cp08.gif",
-      "../image/carousel/cp09.png",
-      "../image/carousel/cp10.png",
-      "../image/carousel/cp11.png",
-      "../image/carousel/cp12.png"
-    ]
-  },
-  {
-    "img": "./image/index/sto_i.png",
-    "id": "40",
-    "category": [
-      "mobile",
-      "web-design"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/sto01.png",
-      "../image/carousel/sto02.png",
-      "../image/carousel/sto0003.gif",
-      "../image/carousel/sto04.png",
-      "../image/carousel/sto05.png",
-      "../image/carousel/sto0055.gif",
-      "../image/carousel/sto06.png",
-      "../image/carousel/sto07.png",
-      "../image/carousel/sto08.png"
-    ]
-  },
-  {
-    "img": "./image/index/kp_i.png",
-    "id": "39",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/kp01.png",
-      "../image/carousel/kp02.png",
-      "../image/carousel/kp03.png",
-      "../image/carousel/kp04.gif",
-      "../image/carousel/kp05.png"
-    ]
-  },
-  {
-    "img": "./image/index/rider01_i.jpg",
-    "id": "38",
-    "category": [
-      "web-design",
-      "icons"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/rider01.jpg",
-      "../image/carousel/rider02.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/elucidly01_i.jpg",
-    "id": "37",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/elucidly01.jpg",
-      "../image/carousel/elucidly02.jpg",
-      "../image/carousel/elucidly03.jpg",
-      "../image/carousel/elucidly04.jpg",
-      "../image/carousel/elucidly05.gif"
-    ]
-  },
-  {
-    "img": "./image/index/wunder01_i.jpg",
-    "id": "36",
-    "category": [
-      "web-design",
-      "art"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/wunder01.jpg",
-      "../image/carousel/wunder02.jpg",
-      "../image/carousel/wunder03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/encata01_i.jpg",
-    "id": "35",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/encata01.jpg",
-      "../image/carousel/encata02.jpg",
-      "../image/carousel/encata03.jpg",
-      "../image/carousel/encata04.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/gametest01_i.jpg",
-    "id": "34",
-    "category": [
-      "mobile",
-      "art"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/gametest01.jpg",
-      "../image/carousel/gametest02.jpg",
-      "../image/carousel/gametest03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/fort01_i.jpg",
-    "id": "33",
-    "category": [
-      "web-design",
-      "identity",
-      "icons"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/fort01.jpg",
-      "../image/carousel/fort02.jpg",
-      "../image/carousel/fort03.jpg",
-      "../image/carousel/fort04.jpg",
-      "../image/carousel/fort05.jpg",
-      "../image/carousel/fort06.jpg",
-      "../image/carousel/fort07.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/lustra01_i.jpg",
-    "id": "32",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/lustra_01.jpg",
-      "../image/carousel/lustra_02.jpg",
-      "../image/carousel/lustra_03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/3dprolab01_i.jpg",
-    "id": "31",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/3dprolab01.jpg",
-      "../image/carousel/3dprolab02.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/ahla01_i.jpg",
-    "id": "30",
-    "category": [
-      "web-design",
-      "art"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/ahla01.jpg",
-      "../image/carousel/ahla01_01.jpg",
-      "../image/carousel/ahla02_01.gif",
-      "../image/carousel/ahla01_02.jpg",
-      "../image/carousel/ahla03.jpg",
-      "../image/carousel/ahla04.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/isimple01_i.jpg",
-    "id": "29",
-    "category": [
-      "mobile"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/iSimple_01.jpg",
-      "../image/carousel/iSimple_02.jpg",
-      "../image/carousel/iSimple_03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/alfabank01_i.jpg",
-    "id": "28",
-    "category": [
-      "mobile",
-      "icons"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/alfaban01.jpg",
-      "../image/carousel/alfaban02.jpg",
-      "../image/carousel/alfaban03.jpg",
-      "../image/carousel/alfaban04.jpg",
-      "../image/carousel/alfaban05.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/strong01_i.jpg",
-    "id": "27",
-    "category": [
-      "web-design",
-      "icons",
-      "art"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/strong01.jpg",
-      "../image/carousel/strong02.jpg",
-      "../image/carousel/strong03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/smile2wakeup_i.jpg",
-    "id": "26",
-    "category": [
-      "mobile"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/smile2wakeup1.jpg",
-      "../image/carousel/smile2wakeup2.jpg",
-      "../image/carousel/smile2wakeup3.jpg",
-      "../image/carousel/smile2wakeup4.jpg",
-      "../image/carousel/smile2wakeup5.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/voka_i.jpg",
-    "id": "25",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/voka1.jpg",
-      "../image/carousel/voka2.jpg",
-      "../image/carousel/voka3.jpg",
-      "../image/carousel/voka4.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/fskn_i.jpg",
-    "id": "24",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/fskn1.jpg",
-      "../image/carousel/fskn2.jpg",
-      "../image/carousel/fskn3.jpg",
-      "../image/carousel/fskn4.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/methold_i.jpg",
-    "id": "23",
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/methold1.jpg",
-      "../image/carousel/methold2.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/flowcalendar_i.jpg",
-    "id": "22",
-    "category": [
-      "mobile"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/flowcalendar1.jpg",
-      "../image/carousel/flowcalendar2.jpg",
-      "../image/carousel/flowcalendar3.jpg",
-      "../image/carousel/flowcalendar4.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/engprints_i.jpg",
-    "id": "21",
-    "category": [
-      "identity",
-      "art"
-    ],
-    "categoryLink": "identity",
-    "portfolioImg": [
-      "../image/carousel/engprints1.jpg",
-      "../image/carousel/engprints2.jpg",
-      "../image/carousel/engprints3.jpg",
-      "../image/carousel/engprints4.jpg",
-      "../image/carousel/engprints5.jpg",
-      "../image/carousel/engprints6.jpg",
-      "../image/carousel/engprints7.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/costtrack_i.jpg",
-    "id": "20",
-    "category": [
-      "mobile"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/costtrack_1.jpg",
-      "../image/carousel/costtrack_2.jpg",
-      "../image/carousel/costtrack_3.jpg",
-      "../image/carousel/costtrack_4.jpg",
-      "../image/carousel/costtrack_5.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/tehnograd_i.jpg",
-    "id": "19",
-    "category": [
-      "web-design",
-      "icons"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/tehnograd1.jpg",
-      "../image/carousel/tehnograd2.jpg",
-      "../image/carousel/tehnograd3.jpg",
-      "../image/carousel/tehnograd4.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/eyeforcolor_i.jpg",
-    "id": "18",
-    "category": [
-      "mobile",
-      "icons"
-    ],
-    "categoryLink": "mobile",
-    "portfolioImg": [
-      "../image/carousel/eyeforcolor01.jpg",
-      "../image/carousel/eyeforcolor02.jpg",
-      "../image/carousel/eyeforcolor03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/visitka_i.jpg",
-    "id": "17",
-    "category": [
-      "identity"
-    ],
-    "categoryLink": "identity",
-    "portfolioImg": [
-      "../image/carousel/visitka1.jpg",
-      "../image/carousel/visitka2.jpg",
-      "../image/carousel/visitka3.jpg",
-      "../image/carousel/visitka4.jpg",
-      "../image/carousel/visitka5.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/caterselect_i.jpg",
-    "id": "16",
-    "category": [
-      "web-design",
-      "art"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/caterselect1.jpg",
-      "../image/carousel/caterselect2.jpg",
-      "../image/carousel/caterselect3.jpg",
-      "../image/carousel/caterselect4.jpg",
-      "../image/carousel/caterselect5.jpg",
-      "../image/carousel/caterselect6.jpg",
-      "../image/carousel/caterselect7.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/movietracker_i.jpg",
-    "id": "15",
-    "category": [
-      "web-design",
-      "icons",
-      "art"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/movietracker1.jpg",
-      "../image/carousel/movietracker2.jpg",
-      "../image/carousel/movietracker3.jpg",
-      "../image/carousel/movietracker4.jpg",
-      "../image/carousel/movietracker5.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/swarm_i.jpg",
-    "id": "14",
-    "category": [
-      "identity",
-      "web-design"
-    ],
-    "categoryLink": "identity",
-    "portfolioImg": [
-      "../image/carousel/swarm01.jpg",
-      "../image/carousel/swarm02.jpg",
-      "../image/carousel/swarm03.jpg",
-      "../image/carousel/swarm04.jpg",
-      "../image/carousel/swarm05.jpg",
-      "../image/carousel/swarm06.jpg",
-      "../image/carousel/swarm07.gif",
-      "../image/carousel/swarm08.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/alivaria_i.jpg",
-    "id": "13",
-    "category": [
-      "icons"
-    ],
-    "categoryLink": "icons",
-    "portfolioImg": [
-      "../image/carousel/alivaria01.jpg",
-      "../image/carousel/alivaria02.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/carhire_i.jpg",
-    "id": "12",
-    "category": [
-      "identity",
-      "web-design",
-      "art"
-    ],
-    "categoryLink": "art",
-    "portfolioImg": [
-      "../image/carousel/carhire01.jpg",
-      "../image/carousel/carhire02.jpg",
-      "../image/carousel/carhire03.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/sadtech_i.jpg",
-    "id": "11",
-    "category": [
-      "web-design",
-      "identity"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/sadtech1.jpg",
-      "../image/carousel/sadtech2.jpg",
-      "../image/carousel/sadtech3.jpg",
-      "../image/carousel/sadtech4.jpg",
-      "../image/carousel/sadtech5.jpg"
-    ]
-  },
-  {
-    "img": "./image/index/unet_i.jpg",
+    "src": "./image/index/unet_i.jpg",
     "id": "10",
     "category": [
       "art",
@@ -487,10 +11,13 @@
       "../image/carousel/unet01.jpg",
       "../image/carousel/unet02.jpg",
       "../image/carousel/unet03.jpg"
-    ]
+    ],
+    "width": 200,
+    "height":551
+
   },
   {
-    "img": "./image/index/icons01_i.jpg",
+    "src": "./image/index/icons01_i.jpg",
     "id": "9",
     "category": [
       "icons"
@@ -500,10 +27,13 @@
       "../image/carousel/iconss01.jpg",
       "../image/carousel/iconss02.jpg",
       "../image/carousel/iconss03.jpg"
-    ]
+    ],
+    "width": 200,
+    "height":432
+
   },
   {
-    "img": "./image/index/agenda_i.jpg",
+    "src": "./image/index/agenda_i.jpg",
     "id": "8",
     "category": [
       "icons"
@@ -512,10 +42,13 @@
     "portfolioImg": [
       "../image/carousel/agenda01.jpg",
       "../image/carousel/agenda02.jpg"
-    ]
+    ],
+    "width": 280,
+    "height":278
+
   },
   {
-    "img": "./image/index/delmet_i.jpg",
+    "src": "./image/index/delmet_i.jpg",
     "id": "7",
     "category": [
       "identity",
@@ -526,10 +59,13 @@
       "../image/carousel/delmet01.jpg",
       "../image/carousel/delmet02.jpg",
       "../image/carousel/delmet03.jpg"
-    ]
+    ],
+    "width": 250,
+    "height":485
+
   },
   {
-    "img": "./image/index/formula7_i.jpg",
+    "src": "./image/index/formula7_i.jpg",
     "id": "6",
     "category": [
       "web-design"
@@ -541,10 +77,13 @@
       "../image/carousel/formula7_03.jpg",
       "../image/carousel/formula7_04.jpg",
       "../image/carousel/formula7_05.jpg"
-    ]
+    ],
+    "width": 200,
+    "height":434
+
   },
   {
-    "img": "./image/index/freebie_i.jpg",
+    "src": "./image/index/freebie_i.jpg",
     "id": "5",
     "category": [
       "icons"
@@ -554,10 +93,13 @@
       "../image/carousel/freebie01.jpg",
       "../image/carousel/freebie02.jpg",
       "../image/carousel/freebie03.jpg"
-    ]
+    ],
+    "width": 200,
+    "height":565
+
   },
   {
-    "img": "./image/index/freon_i.jpg",
+    "src": "./image/index/freon_i.jpg",
     "id": "4",
     "category": [
       "web-design"
@@ -565,10 +107,13 @@
     "categoryLink": "web-design",
     "portfolioImg": [
       "../image/carousel/freon01.jpg"
-    ]
+    ],
+    "width": 150,
+    "height":320
+
   },
   {
-    "img": "./image/index/pojaricons_i.jpg",
+    "src": "./image/index/pojaricons_i.jpg",
     "id": "3",
     "category": [
       "icons"
@@ -579,10 +124,13 @@
       "../image/carousel/pojar02.jpg",
       "../image/carousel/pojar03.jpg",
       "../image/carousel/pojar04.jpg"
-    ]
+    ],
+    "width": 170,
+    "height":300
+
   },
   {
-    "img": "./image/index/proftizers_i.jpg",
+    "src": "./image/index/proftizers_i.jpg",
     "id": "2",
     "category": [
       "icons",
@@ -595,10 +143,13 @@
       "../image/carousel/proftiz02.jpg",
       "../image/carousel/proftiz03.jpg",
       "../image/carousel/proftiz04.jpg"
-    ]
+    ],
+    "width": 200,
+    "height":350
+
   },
   {
-    "img": "./image/index/reactiv_i.jpg",
+    "src": "./image/index/reactiv_i.jpg",
     "id": "1",
     "category": [
       "web-design"
@@ -609,6 +160,9 @@
       "../image/carousel/reactiv02.jpg",
       "../image/carousel/reactiv03.jpg",
       "../image/carousel/reactiv04.jpg"
-    ]
+    ],
+    "width": 180,
+    "height":150
+
   }
 ]

@@ -1,7 +1,7 @@
 import {
     FETCH_GALLERY_FAILURE,
     FETCH_GALLERY_START, FETCH_GALLERY_SUCCESS, FETCH_ITEM_BY_ID_FAILURE, FETCH_ITEM_BY_ID_START,
-    FETCH_ITEM_BY_ID_SUCCESS
+    FETCH_ITEM_BY_ID_SUCCESS, TOGGLE_MODAL
 } from "./actionsType";
 import {fetchGalleryApi, fetchItemByIdApi} from '../api'
 
@@ -46,4 +46,8 @@ export const fetchItemById = (id) => async dispatch => {
             error: true
         })
     }
+};
+
+export const toggleModal = () => dispatch => {
+    dispatch({type: TOGGLE_MODAL})
 };

@@ -1,13 +1,8 @@
 
 .s-gallery
   .design-gallery
-    display: flex
     &-row
-      flex-direction: column
-      flex: 1 0 0
       &-element
-        align-items: flex-start
-        position: relative
         &__image
           width: 100%
           height: 100%
@@ -52,10 +47,7 @@
 
   .img-fluid
     width: 100%
-  .design-gallery-element
-    width: 100%
-
-
+    min-height: 300px
 @media (min-width: 380px)
   .s-gallery
     .design-gallery-element

@@ -1,0 +1,240 @@
+.modal-open
+  .nav-bar
+    padding-right: 15px
+
+.s-slider
+  .container
+    height: 100%
+  &-button
+    position: absolute
+    display: inline-block
+    float: right
+    height: 35px
+    width: 37px
+    font-size: 30px
+    bottom: -35px
+    right: 0
+    line-height: 30px
+    background-color: #ffffff
+    border: 3px solid #000
+    margin-right: 5px
+    font-family: monospace
+    font-weight: 900
+    z-index: 1
+    color: #000000
+    outline: none
+    border-top: none
+    opacity: .5
+    &:hover
+      opacity: 1
+  &-row
+    position: relative
+    height: 100%
+  &.active
+    top: 0
+    transition: top 1s ease
+    overflow-y: auto
+
+  &.modal-dialog
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    margin: 0
+    max-width: none
+  .btn
+    &.ico-slider-close
+      flex-grow: 0
+      border: none
+      box-shadow: none
+      outline: none
+      padding: 24px 28px
+      cursor: pointer
+      background-color: #000000
+      &:hover, &:focus, &:active, &:visited
+        background-color: #000000 !important
+        box-shadow: none !important
+        border: none
+        outline: none !important
+      &:hover
+        .ico-slider-close-path
+          fill: #01B68B
+      &.ico-slider
+        background-color: #FFFFFF
+
+.s-slider .modal-content
+  padding-top: 15px
+  padding-bottom: 20px
+  color: #ffffff
+  height: 100%
+  display: flex
+  box-shadow: none
+  border: none
+  border-radius: 0
+  background-color: #000000
+  overflow-y: auto
+  overflow-x: hidden
+  .about-wrapper
+    display: flex
+    flex-direction: column
+    height: 100%
+    padding: 0
+    .s-about
+      &-list
+        list-style-type: none
+        padding-left: 0
+        text-align: left
+        &-element
+          position: relative
+          margin-bottom: 30px
+          .digit-image
+            margin-right: 20px
+            width: 100%
+          &.h1
+            text-transform: capitalize
+            color: #ffffff
+            font-size: 38px
+            line-height: 44px
+            padding-bottom: 15px
+            margin-bottom: 20px
+            font-weight: 300
+          &.element-about
+            .element-about-paragraph
+              margin-bottom: 23px
+              &.with-photo
+                height: 112px
+                display: flex
+                align-items: center
+                overflow: hidden
+
+          .element-about-paragraph
+            line-height: 20px
+            margin-bottom: 25px
+            &-image
+              width: 100%
+          &__img
+            position: absolute
+            top: 5px
+            left: 0
+          &__link
+            padding-left: 40px
+            color: #ffffff
+            text-decoration: underline
+          &.years
+            position: relative
+            padding-left: 60px
+            text-transform: uppercase
+            margin-bottom: 25px
+            .s-about-list-element__year
+              position: absolute
+              bottom: 0
+              left: 0
+          svg
+            path
+              fill: #fff
+          &:hover
+            .s-about-list-element__link
+              color: #01B68B
+            svg
+              path
+                fill: #01B68B
+          &.panel-skype, &.panel-slack
+            svg
+              top: 2px
+
+
+
+  .contact-info-row
+    padding-bottom: 101px
+    flex: 1 1 auto
+    display: flex
+    align-items: center
+    .contact-info-row-wrapper
+      margin: auto
+      display: flex
+      width: 100%
+      padding: 0
+      .d-flex
+        padding: 0
+  .header-row
+    flex-grow: 0
+    padding-top: 25px
+
+.flexed-row
+  display: flex
+  align-items: center
+  width: 100%
+  .info
+    text-align: left
+    font-family: 'Montserrat', sans-serif
+    font-weight: 900
+    font-size: 42px
+    color: #ffffff
+    position: relative
+    padding-left: 50px
+    margin: 0
+
+  .close_wrapper
+    outline: none
+    background-color: #000
+    text-align: right
+    padding-right: 9px
+    display: flex
+    justify-content: flex-end
+
+  .i_icon
+    position: absolute
+    top: 15px
+    left: 15px
+
+
+
+
+@media screen and (max-width: 991px)
+  .s-slider
+    .modal-content
+      .about-wrapper
+        .contact-info-row
+          padding-bottom: 0
+          .contact-info-row-wrapper
+            flex-direction: column
+      .btn.ico-slider-close
+        padding: 15px 20px
+      .btn.ico-slider
+        padding: 15px
+  .flexed-row
+    .close_wrapper
+      padding-right: 5px
+
+
+@media screen and (max-width: 767px)
+  .s-slider
+    .modal-content
+      .about-wrapper
+        padding: 0 15px
+  .flexed-row
+    justify-content: space-between
+    .close_wrapper
+      padding-right: 20px
+
+
+@media screen and (max-width: 575px)
+  .s-slider
+    .modal-content
+      .about-wrapper
+        .contact-info-row
+          .contact-info-row-wrapper
+            .d-flex
+              flex-direction: column
+      .header-row
+        padding-bottom: 25px
+        padding-top: 30px
+  .flexed-row
+    .close_wrapper
+      padding-right: 15px
+
+
+
+
+

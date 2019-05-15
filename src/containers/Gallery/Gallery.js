@@ -12,7 +12,6 @@ class Gallery extends Component {
 
     componentDidMount = () => {
         this.props.fetchGallery();
-
     };
 
     replaceSymbols = item =>
@@ -22,9 +21,10 @@ class Gallery extends Component {
                 R.replace('-', ' ',))(item)}`}
                 </span>;
 
+
     renderGallery = (item, index) => {
         return (
-            <div key={index} className="design-gallery-element">
+            <div key={item.id} className="design-gallery-element">
                 <Link
                     className="design-gallery-row-element-link"
                     to={`/slider/${item.id}`}>
@@ -40,8 +40,10 @@ class Gallery extends Component {
         )
     };
 
+
     render() {
         const {gallery} = this.props;
+
         return (
             <Masonry
                 className="design-gallery">
@@ -49,11 +51,14 @@ class Gallery extends Component {
             </Masonry>
         )
     }
+
+
 }
 
 
 const mapStateToProps = (state, ownProps) => ({
     gallery: getGallery(state, ownProps),
+
 
 });
 

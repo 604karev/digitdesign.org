@@ -26,7 +26,7 @@ const CarouselWrapper = ({portfolioItem, galleryLength}) => {
             <NavigationLayout>
                 <NavigationSlider/>
             </NavigationLayout>
-            <section>
+            <section className="s-carousel">
                 <SwitchWithSlide>
                     <Route exact path='/slider/:id' component={Carousel}/>
                 </SwitchWithSlide>

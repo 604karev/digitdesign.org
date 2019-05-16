@@ -1,238 +1,147 @@
-.modal-open
-  .nav-bar
-    padding-right: 15px
-
-.s-slider
-  .container
-    height: 100%
-  &-button
-    position: absolute
-    display: inline-block
-    float: right
-    height: 35px
-    width: 37px
-    font-size: 30px
-    bottom: -35px
-    right: 0
-    line-height: 30px
-    background-color: #ffffff
-    border: 3px solid #000
-    margin-right: 5px
-    font-family: monospace
-    font-weight: 900
-    z-index: 1
-    color: #000000
-    outline: none
-    border-top: none
-    opacity: .5
-    &:hover
-      opacity: 1
-  &-row
-    position: relative
-    height: 100%
+.modal-window
+  width: 100%
+  height: 100%
+  min-width: 320px
   &.active
     top: 0
     transition: top 1s ease
-    overflow-y: auto
-
+    background-color: #000000
   &.modal-dialog
-    position: fixed
-    top: 0
-    right: 0
-    left: 0
-    bottom: 0
     margin: 0
     max-width: none
-  .btn
-    &.ico-slider-close
-      flex-grow: 0
-      border: none
-      box-shadow: none
-      outline: none
-      padding: 24px 28px
-      cursor: pointer
-      background-color: #000000
-      &:hover, &:focus, &:active, &:visited
-        background-color: #000000 !important
-        box-shadow: none !important
-        border: none
-        outline: none !important
-      &:hover
-        .ico-slider-close-path
-          fill: #01B68B
-      &.ico-slider
-        background-color: #FFFFFF
 
-.s-slider .modal-content
-  padding-top: 15px
-  padding-bottom: 20px
-  color: #ffffff
-  height: 100%
-  display: flex
-  box-shadow: none
+.modal-content
   border: none
   border-radius: 0
   background-color: #000000
+  height: 100%
   overflow-y: auto
-  overflow-x: hidden
-  .about-wrapper
-    display: flex
-    flex-direction: column
-    height: 100%
+
+.modal-close
+  &__icon
+    border: none
+    box-shadow: none
+    outline: none
+    padding: 27px 28px
+    cursor: pointer
+    line-height: 1
+    background-color: #000000
+    &:hover:focus, &:active, &:visited
+      background-color: #000000
+      box-shadow: none
+      border: none
+      outline: none
+    &:hover
+      .modal-close__path
+        fill: #01B68B
+
+.s-modal-header
+  .modal-header
+    margin-top: 40px
     padding: 0
-    .s-about
-      &-list
-        list-style-type: none
-        padding-left: 0
-        text-align: left
-        &-element
-          position: relative
-          margin-bottom: 30px
-          .digit-image
-            margin-right: 20px
-            width: 100%
-          &.h1
-            text-transform: capitalize
-            color: #ffffff
-            font-size: 38px
-            line-height: 44px
-            padding-bottom: 15px
-            margin-bottom: 20px
-            font-weight: 300
-          &.element-about
-            .element-about-paragraph
-              margin-bottom: 23px
-              &.with-photo
-                height: 112px
-                display: flex
-                align-items: center
-                overflow: hidden
-
-          .element-about-paragraph
-            line-height: 20px
-            margin-bottom: 25px
-            &-image
-              width: 100%
-          &__img
-            position: absolute
-            top: 5px
-            left: 0
-          &__link
-            padding-left: 40px
-            color: #ffffff
-            text-decoration: underline
-          &.years
-            position: relative
-            padding-left: 60px
-            text-transform: uppercase
-            margin-bottom: 25px
-            .s-about-list-element__year
-              position: absolute
-              bottom: 0
-              left: 0
-          svg
-            path
-              fill: #fff
-          &:hover
-            .s-about-list-element__link
-              color: #01B68B
-            svg
-              path
-                fill: #01B68B
-          &.panel-skype, &.panel-slack
-            svg
-              top: 2px
-
-
-
-  .contact-info-row
-    padding-bottom: 101px
-    flex: 1 1 auto
-    display: flex
-    align-items: center
-    .contact-info-row-wrapper
-      margin: auto
-      display: flex
-      width: 100%
-      padding: 0
-      .d-flex
-        padding: 0
-  .header-row
-    flex-grow: 0
-    padding-top: 25px
-
-.flexed-row
-  display: flex
-  align-items: center
-  width: 100%
-  .info
-    text-align: left
-    font-family: 'Montserrat', sans-serif
-    font-weight: 900
+    border: none
+  .info-text
     font-size: 42px
+    font-weight: 900
     color: #ffffff
     position: relative
-    padding-left: 50px
-    margin: 0
+    padding-left: 40px
+    &__icon
+      position: absolute
+      top: 22px
+      left: 0
 
-  .close_wrapper
-    outline: none
-    background-color: #000
-    text-align: right
-    padding-right: 9px
-    display: flex
-    justify-content: flex-end
+.s-about
+  .contact-list, .contact-block
+    color: #ffffff
+  .contact-block
+    &__paragraph
+      line-height: 20px
+      margin-bottom: 2em
+      &.with-photo
+        display: flex
+        align-items: center
+        overflow: hidden
+        height: 112px
+    &__image
+      width: 100%
+  .contact-list
+    padding-left: 0
+    list-style-type: none
+    &__element
+      margin-bottom: 1.5em
+      position: relative
+    &__link
+      padding-left: 30px
+      color: #ffffff
+      text-decoration: underline
+      &:hover
+        color: #01b68b
+        & ~ .contact-list__image
+          path
+            fill: #01b68b
+    &__image
+      position: absolute
+      top: 5px
+      left: 0
+      &.panel-skype
+        top: 3px
+      &.panel-slack
+        top: 2px
 
-  .i_icon
-    position: absolute
-    top: 15px
-    left: 15px
+.s-reviews
+  .reviews
+    color: #ffffff
+    &__link
+      margin-left: 30px
+      font-size: 18px
+      color: #ffffff
+      text-decoration: underline
+      display: inline-block
+    &-author
+      position: relative
+      &__wrapper
+        padding-left: 55px
+      &__h3
+        margin: 0
+        font-weight: 700
+        line-height: 20px
+        font-size: 16px
+      &__position
+        margin-top: 5px
+        font-size: 12px
+        text-decoration: underline
+    &-messengers
+      display: flex
+      padding: .8em 0 1.2em
+      &__img
+        margin-right: 13px
+  .testimonial
+    &__h4
+      font-size: 14px
+      color: #828282
+      margin: .8em 0 1.2em
+    &__paragraph
+      font-style: italic
+      font-size: 14px
 
-
-
+.h2
+  font-weight: 300
+  font-size: 38px
+  margin: .8em 0
+  color: #ffffff
 
 @media screen and (max-width: 991px)
-  .s-slider
-    .modal-content
-      .about-wrapper
-        .contact-info-row
-          padding-bottom: 0
-          .contact-info-row-wrapper
-            flex-direction: column
-      .btn.ico-slider-close
-        padding: 15px 20px
-      .btn.ico-slider
-        padding: 15px
-  .flexed-row
-    .close_wrapper
-      padding-right: 5px
+  .modal-close__icon
+    padding: 17px 18px
 
 
 @media screen and (max-width: 767px)
-  .s-slider
-    .modal-content
-      .about-wrapper
-        padding: 0 15px
-  .flexed-row
-    justify-content: space-between
-    .close_wrapper
-      padding-right: 20px
+  //
 
 
 @media screen and (max-width: 575px)
-  .s-slider
-    .modal-content
-      .about-wrapper
-        .contact-info-row
-          .contact-info-row-wrapper
-            .d-flex
-              flex-direction: column
-      .header-row
-        padding-bottom: 25px
-        padding-top: 30px
-  .flexed-row
-    .close_wrapper
-      padding-right: 15px
+  //
 
 
 

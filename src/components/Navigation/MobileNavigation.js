@@ -1,13 +1,15 @@
 import React from 'react'
 import NavigationLinks from './NavigationLinks'
 import './MobileNavigation.sass'
+import {connect} from 'react-redux'
+import {toggleMenu} from '../../actions/index'
 
-const MobileNavigation = ({openMobileNav, mobileMenuState}) => {
+const MobileNavigation = ({isOpen, toggleMenu}) => {
     return (
         <div className="nav-mobile float-left">
             <div className="nav-mobile-wrapper ">
                     <span className="nav-mobile-burger"
-                          onClick={() => openMobileNav()}>
+                          onClick={() => toggleMenu()}>
                         <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd"
@@ -26,10 +28,17 @@ const MobileNavigation = ({openMobileNav, mobileMenuState}) => {
                 </svg>
 
             </div>
-            {mobileMenuState ? <NavigationLinks/> : null}
+            {isOpen ? <NavigationLinks/> : null}
         </div>
     )
 
 };
+const mapStateToProps=(state)=>({
+    isOpen: state.mobileMenu
+});
 
-export default MobileNavigation
+const mapDispatchToProps ={
+    toggleMenu
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MobileNavigation)

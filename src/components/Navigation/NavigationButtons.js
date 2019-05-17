@@ -1,18 +1,27 @@
 import React, {Component} from 'react'
 import './NavigationButtons.sass'
-import ModalPanel from '../ModalPanel/ModalPanel'
+import ModalPanelInfo from '../ModalPanelInfo/ModalPanelInfo'
+import ModalPanelContact from '../ModalPanelContact/ModalPanelContact'
 
 class NavigationButton extends Component {
     state = {
-        isOpen: false
-    }
-    toggleModal = () => this.setState({isOpen: !this.state.isOpen});
+        infoIsOpen: false,
+        contactIsOpen: false
+    };
+
+    toggleModalInfo = () => this.setState({infoIsOpen: !this.state.infoIsOpen});
+    toggleModalContact = () => this.setState({contactIsOpen: !this.state.contactIsOpen});
+
 
     render() {
+
+
         return (
             <div className="btn-group icons float-right">
-                <button
-                    className="btn ico-mail ml-3 rounded-0">
+                <button onClick={this.toggleModalContact}
+                        data-toggle="modal"
+                        data-target="#contact"
+                        className="btn ico-mail ml-3 rounded-0">
                     <svg className="ico-mail-svg" width="20" height="16" viewBox="0 0 20 16"
                          fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -21,8 +30,8 @@ class NavigationButton extends Component {
                             fill="black"/>
                     </svg>
                 </button>
-                <button onClick={this.toggleModal} className="btn ico-slider ml-3 rounded-0" data-toggle="modal"
-                        data-target="#exampleModal">
+                <button onClick={this.toggleModalInfo} className="btn ico-slider ml-3 rounded-0" data-toggle="modal"
+                        data-target="#about">
                     <svg className="ico-slider-svg" width="20" height="20" viewBox="0 0 20 20"
                          fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +40,10 @@ class NavigationButton extends Component {
                             fill="black"/>
                     </svg>
                 </button>
-                <ModalPanel isOpen={this.state.isOpen} toggleModal={this.toggleModal} />
+                <ModalPanelInfo infoIsOpen={this.state.infoIsOpen} toggleModalInfo={this.toggleModalInfo}/>
+                <ModalPanelContact contactIsOpen={this.state.contactIsOpen} toggleModalContact={this.toggleModalContact}/>
+
+
             </div>
         )
     }

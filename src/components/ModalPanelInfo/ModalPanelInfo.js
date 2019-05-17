@@ -1,19 +1,19 @@
 import React from 'react'
 import {Modal} from 'reactstrap';
-import './ModalPanel.sass'
+import './ModalPanelInfo.sass'
 import {Link} from 'react-router-dom'
 
 
-const ModalPanel = ({isOpen, toggleModal}) => {
+const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
     return (
-        <Modal className="modal-window" isOpen={isOpen} id="exampleModal" fade>
+        <Modal className="modal-window" isOpen={infoIsOpen} id="about" fade>
             <section className="s-modal-header">
                 <div className="modal-header">
                     <div className="container">
                         <div className="row">
                             <div className="col">
                                 <div className="modal-close float-right">
-                                    <button onClick={toggleModal} data-dismiss="modal"
+                                    <button onClick={toggleModalInfo} data-dismiss="modal"
                                             data-target="#exampleModal"
                                             className="btn modal-close__icon"
                                     >
@@ -336,4 +336,4 @@ const ModalPanel = ({isOpen, toggleModal}) => {
 };
 
 
-export default ModalPanel
+export default ModalPanelInfo

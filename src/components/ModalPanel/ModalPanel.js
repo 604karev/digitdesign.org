@@ -149,7 +149,7 @@ const ModalPanel = ({isOpen, toggleModal}) => {
                             </div>
                             <div className="col-md-6 col-lg-3 py-3 px-xl-2">
                                 <div className="reviews-author">
-                                    <img className="reviews-author__image float-left" src="/image/author_foto.png"
+                                    <img className="reviews-author__image float-left" src="/image/author_photo.png"
                                          alt="author_foto"/>
                                     <div className="reviews-author__wrapper ">
                                         <h3 className="reviews-author__h3 h3">Sergey Poltavin</h3>
@@ -194,7 +194,7 @@ const ModalPanel = ({isOpen, toggleModal}) => {
                             </div>
                             <div className="col-md-6 col-lg-3 py-3 px-xl-2">
                                 <div className="reviews-author">
-                                    <img className="reviews-author__image float-left" src="/image/author_foto.png"
+                                    <img className="reviews-author__image float-left" src="/image/author_photo.png"
                                          alt="author_foto"/>
                                     <div className="reviews-author__wrapper ">
                                         <h3 className="reviews-author__h3 h3">Sergey Poltavin</h3>
@@ -239,7 +239,7 @@ const ModalPanel = ({isOpen, toggleModal}) => {
                             </div>
                             <div className="col-md-6 col-lg-3 py-3 px-xl-2">
                                 <div className="reviews-author">
-                                    <img className="reviews-author__image float-left" src="/image/author_foto.png"
+                                    <img className="reviews-author__image float-left" src="/image/author_photo.png"
                                          alt="author_foto"/>
                                     <div className="reviews-author__wrapper ">
                                         <h3 className="reviews-author__h3 h3">Sergey Poltavin</h3>
@@ -284,7 +284,7 @@ const ModalPanel = ({isOpen, toggleModal}) => {
                             </div>
                             <div className="col-md-6 col-lg-3 py-3 px-xl-2">
                                 <div className="reviews-author">
-                                    <img className="reviews-author__image float-left" src="/image/author_foto.png"
+                                    <img className="reviews-author__image float-left" src="/image/author_photo.png"
                                          alt="author_foto"/>
                                     <div className="reviews-author__wrapper ">
                                         <h3 className="reviews-author__h3 h3">Sergey Poltavin</h3>

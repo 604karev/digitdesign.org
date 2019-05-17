@@ -35,7 +35,7 @@ class NavigationLinksWrapper extends Component {
         return (
             this.state.width < 768 ?
                 <MobileNavigation mobileMenuState={this.state.mobileIsOpened} openMobileNav={this.openMobileNav}/>
-                : <div className="nav-bar-list h-100">
+                : <div className="nav-bar-wrapper h-100">
                     <Link to="/" className="nav-bar-logo">
                         {this.state.width > 991 ? `DigitDesign` :
                             <svg width="66" height="39" viewBox="0 0 66 29" fill="none"

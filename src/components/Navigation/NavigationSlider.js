@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const NavigationSlider = () => {
     return (
-        <div className="nav-bar-list mobile h-100 float-left">
+        <div className="nav-bar-wrapper mobile h-100 float-left">
             <div className="nav-bar-list__element">
                 <Link to="/" className="nav-bar-list__item all">
                     <svg width="66" height="29" viewBox="0 0 66 29" fill="none"

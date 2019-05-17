@@ -4,7 +4,7 @@ import './NavigationLinks.sass'
 
 const NavigationLinks = () => {
     return (
-        <ul className="nav-bar-wrapper">
+        <ul className="nav-bar-list">
             <li className="nav-bar-list__element">
                 <Link to="/" className="nav-bar-list__link all">All
                 </Link>

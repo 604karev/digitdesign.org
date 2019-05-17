@@ -26,13 +26,13 @@ class Gallery extends Component {
         return (
             <div key={item.id} className="design-gallery-element">
                 <Link
-                    className="design-gallery-row-element-link"
+                    className="design-gallery__link"
                     to={`/slider/${item.id}`}>
                     <img
                         className="img-fluid"
                         src={item.img}
                         alt={item.img}/>
-                    <span className="design-gallery-row-element-link__overlay">
+                    <span className="design-gallery__overlay">
                            {R.map(this.replaceSymbols, item.category)}
                     </span>
                 </Link>

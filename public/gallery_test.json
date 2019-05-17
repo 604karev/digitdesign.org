@@ -12,7 +12,7 @@
       "../image/carousel/unet02.jpg",
       "../image/carousel/unet03.jpg"
     ],
-    "width": 200,
+    "width": 380,
     "height":551
 
   },
@@ -28,7 +28,7 @@
       "../image/carousel/iconss02.jpg",
       "../image/carousel/iconss03.jpg"
     ],
-    "width": 200,
+    "width": 380,
     "height":432
 
   },
@@ -43,7 +43,7 @@
       "../image/carousel/agenda01.jpg",
       "../image/carousel/agenda02.jpg"
     ],
-    "width": 280,
+    "width": 380,
     "height":278
 
   },
@@ -60,7 +60,7 @@
       "../image/carousel/delmet02.jpg",
       "../image/carousel/delmet03.jpg"
     ],
-    "width": 250,
+    "width": 380,
     "height":485
 
   },
@@ -78,7 +78,7 @@
       "../image/carousel/formula7_04.jpg",
       "../image/carousel/formula7_05.jpg"
     ],
-    "width": 200,
+    "width": 380,
     "height":434
 
   },
@@ -94,7 +94,7 @@
       "../image/carousel/freebie02.jpg",
       "../image/carousel/freebie03.jpg"
     ],
-    "width": 200,
+    "width": 380,
     "height":565
 
   },
@@ -108,7 +108,7 @@
     "portfolioImg": [
       "../image/carousel/freon01.jpg"
     ],
-    "width": 150,
+    "width": 380,
     "height":320
 
   },
@@ -125,8 +125,8 @@
       "../image/carousel/pojar03.jpg",
       "../image/carousel/pojar04.jpg"
     ],
-    "width": 170,
-    "height":300
+    "width": 380,
+    "height":394
 
   },
   {
@@ -144,8 +144,8 @@
       "../image/carousel/proftiz03.jpg",
       "../image/carousel/proftiz04.jpg"
     ],
-    "width": 200,
-    "height":350
+    "width": 380,
+    "height":542
 
   },
   {
@@ -161,8 +161,8 @@
       "../image/carousel/reactiv03.jpg",
       "../image/carousel/reactiv04.jpg"
     ],
-    "width": 180,
-    "height":150
+    "width": 380,
+    "height":318
 
   }
 ]

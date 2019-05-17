@@ -31,7 +31,6 @@ class NavigationLinksWrapper extends Component {
     });
 
     render() {
-        console.log(this.state.width)
         return (
             this.state.width < 768 ?
                 <MobileNavigation mobileMenuState={this.state.mobileIsOpened} openMobileNav={this.openMobileNav}/>

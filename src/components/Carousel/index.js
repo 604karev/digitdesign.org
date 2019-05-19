@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getGalleryItemById} from '../../selectors'
-import {fetchItemById} from '../../actions/index'
+import {getGalleryItemById} from 'selectors'
+import {fetchItemById} from 'actions/index'
 
 
 class Carousel extends Component {
@@ -34,13 +34,10 @@ class Carousel extends Component {
                     <div className="row">
                         <div className="col-md-10 offset-md-1 px-0 px-sm-3">
                             {portfolioItem && (this.renderPortfolioImages())}
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         )
     }
 }

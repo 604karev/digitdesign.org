@@ -1,5 +1,8 @@
 import * as R from 'ramda'
-import {FETCH_GALLERY_SUCCESS, FETCH_ITEM_BY_ID_SUCCESS} from "../actions/actionsType";
+import {
+    FETCH_GALLERY_SUCCESS,
+    FETCH_ITEM_BY_ID_SUCCESS
+} from "actions/actionsType";
 
 const initialState = {};
 

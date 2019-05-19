@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
-import './App.sass';
+import 'App.sass';
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {applyMiddleware, createStore} from 'redux'
 import thunk from 'redux-thunk'
-import reducers from './reducers'
+import reducers from 'reducers'
 import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 import {Provider} from 'react-redux'
-import Layout from './containers/Layout/Layout'
-import Gallery from './containers/Gallery/Gallery'
-import CarouselWrapper from './containers/Carousel/CarouselWrapper'
-
+import Layout from 'containers/Layout/'
+import Gallery from 'containers/Gallery'
+import CarouselWrapper from 'containers/Carousel'
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 

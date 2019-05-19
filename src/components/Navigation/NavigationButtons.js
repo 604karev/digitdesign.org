@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './NavigationButtons.sass'
-import ModalPanelInfo from '../ModalPanelInfo/ModalPanelInfo'
-import ModalPanelContact from '../ModalPanelContact/ModalPanelContact'
+import ModalPanelInfo from 'components/ModalPanelInfo'
+import ModalPanelContact from 'components/ModalPanelContact'
 
 class NavigationButton extends Component {
     state = {
@@ -42,8 +42,6 @@ class NavigationButton extends Component {
                 </button>
                 <ModalPanelInfo infoIsOpen={this.state.infoIsOpen} toggleModalInfo={this.toggleModalInfo}/>
                 <ModalPanelContact contactIsOpen={this.state.contactIsOpen} toggleModalContact={this.toggleModalContact}/>
-
-
             </div>
         )
     }

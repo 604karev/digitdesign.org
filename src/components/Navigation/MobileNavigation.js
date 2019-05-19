@@ -2,7 +2,7 @@ import React from 'react'
 import NavigationLinks from './NavigationLinks'
 import './MobileNavigation.sass'
 import {connect} from 'react-redux'
-import {toggleMenu} from '../../actions/index'
+import {toggleMenu} from 'actions'
 
 const MobileNavigation = ({isOpen, toggleMenu}) => {
     return (

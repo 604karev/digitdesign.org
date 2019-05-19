@@ -1,6 +1,6 @@
 import React from 'react'
 import {Modal} from 'reactstrap';
-import './ModalPanelInfo.sass'
+import './index.sass'
 import {Link} from 'react-router-dom'
 
 
@@ -37,7 +37,6 @@ const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
                                     </svg>
                                     Info
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -157,15 +156,33 @@ const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
                                     </div>
                                 </div>
                                 <div className="reviews-messengers">
-                                    <img className="reviews-messengers__img" src="/image/Skype.svg" alt="Skype"/>
-                                    <img className="reviews-messengers__img" src="/image/Slack.svg" alt="Slack"/>
-                                    <img className="reviews-messengers__img" src="/image/Youtube.svg"
-                                         alt="Youtube"/>
-                                    <img className="reviews-messengers__img" src="/image/LinkedIN.svg"
-                                         alt="LinkedIN"/>
-                                    <img className="reviews-messengers__img" src="/image/Facebook.svg"
-                                         alt="Facebook"/>
-                                    <img className="reviews-messengers__img" src="/image/Mail.svg" alt="Mail"/>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Skype.svg" alt="Skype"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Slack.svg" alt="Slack"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Youtube.svg"
+                                             alt="Youtube"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/LinkedIN.svg"
+                                             alt="LinkedIN"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Facebook.svg"
+                                             alt="Facebook"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Mail.svg" alt="Mail"/>
+                                    </Link>
                                 </div>
                                 <div className="testimonial">
                                     <h4 className="testimonial__h4 h4">Original review</h4>
@@ -202,15 +219,33 @@ const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
                                     </div>
                                 </div>
                                 <div className="reviews-messengers">
-                                    <img className="reviews-messengers__img" src="/image/Skype.svg" alt="Skype"/>
-                                    <img className="reviews-messengers__img" src="/image/Slack.svg" alt="Slack"/>
-                                    <img className="reviews-messengers__img" src="/image/Youtube.svg"
-                                         alt="Youtube"/>
-                                    <img className="reviews-messengers__img" src="/image/LinkedIN.svg"
-                                         alt="LinkedIN"/>
-                                    <img className="reviews-messengers__img" src="/image/Facebook.svg"
-                                         alt="Facebook"/>
-                                    <img className="reviews-messengers__img" src="/image/Mail.svg" alt="Mail"/>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Skype.svg" alt="Skype"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Slack.svg" alt="Slack"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Youtube.svg"
+                                             alt="Youtube"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/LinkedIN.svg"
+                                             alt="LinkedIN"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Facebook.svg"
+                                             alt="Facebook"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Mail.svg" alt="Mail"/>
+                                    </Link>
                                 </div>
                                 <div className="testimonial">
                                     <h4 className="testimonial__h4 h4">Original review</h4>
@@ -247,15 +282,33 @@ const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
                                     </div>
                                 </div>
                                 <div className="reviews-messengers">
-                                    <img className="reviews-messengers__img" src="/image/Skype.svg" alt="Skype"/>
-                                    <img className="reviews-messengers__img" src="/image/Slack.svg" alt="Slack"/>
-                                    <img className="reviews-messengers__img" src="/image/Youtube.svg"
-                                         alt="Youtube"/>
-                                    <img className="reviews-messengers__img" src="/image/LinkedIN.svg"
-                                         alt="LinkedIN"/>
-                                    <img className="reviews-messengers__img" src="/image/Facebook.svg"
-                                         alt="Facebook"/>
-                                    <img className="reviews-messengers__img" src="/image/Mail.svg" alt="Mail"/>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Skype.svg" alt="Skype"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Slack.svg" alt="Slack"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Youtube.svg"
+                                             alt="Youtube"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/LinkedIN.svg"
+                                             alt="LinkedIN"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Facebook.svg"
+                                             alt="Facebook"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Mail.svg" alt="Mail"/>
+                                    </Link>
                                 </div>
                                 <div className="testimonial">
                                     <h4 className="testimonial__h4 h4">Original review</h4>
@@ -292,15 +345,33 @@ const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
                                     </div>
                                 </div>
                                 <div className="reviews-messengers">
-                                    <img className="reviews-messengers__img" src="/image/Skype.svg" alt="Skype"/>
-                                    <img className="reviews-messengers__img" src="/image/Slack.svg" alt="Slack"/>
-                                    <img className="reviews-messengers__img" src="/image/Youtube.svg"
-                                         alt="Youtube"/>
-                                    <img className="reviews-messengers__img" src="/image/LinkedIN.svg"
-                                         alt="LinkedIN"/>
-                                    <img className="reviews-messengers__img" src="/image/Facebook.svg"
-                                         alt="Facebook"/>
-                                    <img className="reviews-messengers__img" src="/image/Mail.svg" alt="Mail"/>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Skype.svg" alt="Skype"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Slack.svg" alt="Slack"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Youtube.svg"
+                                             alt="Youtube"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/LinkedIN.svg"
+                                             alt="LinkedIN"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Facebook.svg"
+                                             alt="Facebook"/>
+                                    </Link>
+                                    <Link className="reviews-messengers__link" to='#'>
+                                        <img className="reviews-messengers__img"
+                                             src="/image/Mail.svg" alt="Mail"/>
+                                    </Link>
                                 </div>
                                 <div className="testimonial">
                                     <h4 className="testimonial__h4 h4">Original review</h4>

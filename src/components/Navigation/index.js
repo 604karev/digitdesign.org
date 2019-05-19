@@ -1,8 +1,8 @@
 import React from 'react'
 import NavigationButtons from './NavigationButtons'
-import './NavigationLayout.sass'
+import './index.sass'
 
-const NavigationLayout = ({children}) => (
+const Navigation = ({children}) => (
     <section className="s-nav-bar">
         <nav className="nav-bar relative">
             <div className="container">
@@ -19,4 +19,4 @@ const NavigationLayout = ({children}) => (
 
 );
 
-export default NavigationLayout
+export default Navigation

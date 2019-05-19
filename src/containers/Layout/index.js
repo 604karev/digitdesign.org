@@ -1,14 +1,14 @@
 import React from 'react'
-import NavigationLayout from '../../components/Navigation/NavigationLayout';
-import Navigation from '../../components/Navigation/NavigationLinksWrapper';
+import Navigation from 'components/Navigation';
+import NavigationLinksWrapper from 'components/Navigation/NavigationLinksWrapper';
 
 
 const Layout = ({children}) => {
     return (
         <div className="App">
-            <NavigationLayout>
-                <Navigation/>
-            </NavigationLayout>
+            <Navigation>
+                <NavigationLinksWrapper/>
+            </Navigation>
             <section className="s-gallery">
                 <div className="container-fluid">
                     <div className="row">

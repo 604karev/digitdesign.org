@@ -1,5 +1,9 @@
 import * as R from 'ramda';
-import {FETCH_ITEM_BY_ID_FAILURE, FETCH_ITEM_BY_ID_START, FETCH_ITEM_BY_ID_SUCCESS} from "../actions/actionsType";
+import {
+    FETCH_ITEM_BY_ID_FAILURE,
+    FETCH_ITEM_BY_ID_START,
+    FETCH_ITEM_BY_ID_SUCCESS
+} from "actions/actionsType";
 
 const initialState = {
     id: null,

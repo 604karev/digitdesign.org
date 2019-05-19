@@ -1,16 +1,15 @@
 import React from "react";
 import {Link, Route} from "react-router-dom";
-import Carousel from '../../components/Carousel/Carousel';
+import Carousel from 'components/Carousel';
 import {connect} from 'react-redux';
-import {getGalleryItemById, getGalleryLength} from '../../selectors'
-import NavigationLayout from '../../components/Navigation/NavigationLayout';
-import NavigationSlider from '../../components/Navigation/NavigationSlider'
-import SwitchWithSlide from "../../components/Carousel/Slider/SwitchWithSlide";
-import './CarouselWrapper.sass'
-
-
+import {getGalleryItemById, getGalleryLength} from 'selectors'
+import Navigation from 'components/Navigation';
+import NavigationSlider from 'components/Navigation/NavigationSlider'
+import SwitchWithSlide from 'components/Carousel/Slider/SwitchWithSlide';
+import './index.sass'
 
 const CarouselWrapper = ({portfolioItem, galleryLength}) => {
+
     const getSliderId = (currentId) => {
         if (currentId > galleryLength) {
             currentId = 1
@@ -23,9 +22,9 @@ const CarouselWrapper = ({portfolioItem, galleryLength}) => {
 
     return (
         <div className="App">
-            <NavigationLayout>
+            <Navigation>
                 <NavigationSlider/>
-            </NavigationLayout>
+            </Navigation>
             <section className="s-carousel">
                 <SwitchWithSlide>
                     <Route exact path='/slider/:id' component={Carousel}/>
@@ -36,13 +35,12 @@ const CarouselWrapper = ({portfolioItem, galleryLength}) => {
                       to={`/slider/${portfolioItem && getSliderId(portfolioItem.id - 1)}`}/>
             </section>
         </div>
-
     )
 };
+
 const mapStateToProps = (state) => ({
     portfolioItem: getGalleryItemById(state, state.galleryPageId.id),
     galleryLength: getGalleryLength(state),
-
 });
 
 export default connect(mapStateToProps)(CarouselWrapper)

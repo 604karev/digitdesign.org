@@ -1,4 +1,6 @@
-import {TOGGLE_MOBILE_MENU} from "../actions/actionsType";
+import {
+    TOGGLE_MOBILE_MENU
+} from "actions/actionsType";
 
 const initialState = false;
 

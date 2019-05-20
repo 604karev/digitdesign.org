@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
     return (
-        <Modal className="modal-window" isOpen={infoIsOpen} id="about" fade>
+        <Modal className="modal-window" isOpen={infoIsOpen} id="aboutModal" fade>
             <section className="s-modal-header">
                 <div className="modal-header">
                     <div className="container">
@@ -14,7 +14,7 @@ const ModalPanelInfo = ({infoIsOpen, toggleModalInfo}) => {
                             <div className="col">
                                 <div className="modal-close float-right">
                                     <button onClick={toggleModalInfo} data-dismiss="modal"
-                                            data-target="#exampleModal"
+                                            data-target="#aboutModal"
                                             className="btn modal-close__icon"
                                     >
                                         <svg className="modal-close__svg" width="14" height="14"

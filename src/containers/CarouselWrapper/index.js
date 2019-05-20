@@ -27,12 +27,12 @@ const CarouselWrapper = ({portfolioItem, galleryLength}) => {
             </Navigation>
             <section className="s-carousel">
                 <SwitchWithSlide>
-                    <Route exact path='/slider/:id' component={Carousel}/>
+                    <Route exact path='/carousel/:id' component={Carousel}/>
                 </SwitchWithSlide>
                 <Link className="slick-arrow slick-next"
-                      to={`/slider/${portfolioItem && getSliderId(portfolioItem.id + 1)}`}/>
+                      to={`/carousel/${portfolioItem && getSliderId(portfolioItem.id + 1)}`}/>
                 <Link className="slick-arrow slick-prev"
-                      to={`/slider/${portfolioItem && getSliderId(portfolioItem.id - 1)}`}/>
+                      to={`/carousel/${portfolioItem && getSliderId(portfolioItem.id - 1)}`}/>
             </section>
         </div>
     )

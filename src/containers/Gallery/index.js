@@ -25,7 +25,7 @@ class Gallery extends Component {
             <div key={item.id} className="design-gallery-element">
                 <Link
                     className="design-gallery__link"
-                    to={`/slider/${item.id}`}>
+                    to={`/carousel/${item.id}`}>
                     <img
                         className="img-fluid"
                         src={item.img}

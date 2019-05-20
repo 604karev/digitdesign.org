@@ -7,7 +7,7 @@ import {
     FETCH_ITEM_BY_ID_SUCCESS,
     TOGGLE_MOBILE_MENU
 } from "./actionsType";
-import {fetchGalleryApi, fetchItemByIdApi} from '../api'
+import {fetchGalleryApi, fetchItemByIdApi} from 'api'
 
 export const fetchGallery = () => async dispatch => {
 

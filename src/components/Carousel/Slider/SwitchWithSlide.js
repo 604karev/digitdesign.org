@@ -29,7 +29,7 @@ class SlideOut extends React.Component {
     componentDidUpdate = (prevProps, prevState) => {
         const {galleryLength} = this.props;
         const pathToNumber = (path) => (
-            Number(R.replace('/slider/', '', path))
+            Number(R.replace('/carousel/', '', path))
         );
         const prevUniqId = pathToNumber(prevProps.uniqKey) || prevProps.children.type;
         const uniqId = pathToNumber(this.props.uniqKey) || this.props.children.type;

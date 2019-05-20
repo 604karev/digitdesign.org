@@ -8,13 +8,14 @@ import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import Layout from 'containers/Layout/'
 import Gallery from 'containers/Gallery'
-import CarouselWrapper from 'containers/Carousel'
+import CarouselWrapper from 'containers/CarouselWrapper'
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
 class App extends Component {
 
     render() {
+
         const withLayout = Component => props => <Layout store={store}> <Component {...props}/> </Layout>;
 
         return (

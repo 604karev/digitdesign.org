@@ -10,14 +10,12 @@ class NavigationButton extends Component {
     };
 
     toggleModalInfo = () => this.setState({infoIsOpen: !this.state.infoIsOpen});
-    toggleModalContact = () => this.setState({contactIsOpen: !this.state.contactIsOpen});
 
+    toggleModalContact = () => this.setState(prevState => ({contactIsOpen: !prevState.contactIsOpen}));
 
     render() {
-
-
         return (
-            <div className="btn-group icons float-right">
+            <div className="icons float-right">
                 <button onClick={this.toggleModalContact}
                         data-toggle="modal"
                         data-target="#contact"
@@ -40,8 +38,14 @@ class NavigationButton extends Component {
                             fill="black"/>
                     </svg>
                 </button>
-                <ModalPanelInfo infoIsOpen={this.state.infoIsOpen} toggleModalInfo={this.toggleModalInfo}/>
-                <ModalPanelContact contactIsOpen={this.state.contactIsOpen} toggleModalContact={this.toggleModalContact}/>
+                <ModalPanelInfo
+                    infoIsOpen={this.state.infoIsOpen}
+                    toggleModalInfo={this.toggleModalInfo}
+                />
+                <ModalPanelContact
+                    contactIsOpen={this.state.contactIsOpen}
+                    toggleModalContact={this.toggleModalContact}
+                />
             </div>
         )
     }

@@ -9,6 +9,11 @@
   &.modal-dialog
     margin: 0
     max-width: none
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
 
 .modal-content
   border: none
@@ -16,6 +21,8 @@
   background-color: #000000
   height: 100%
   overflow-y: auto
+  display: flex
+  flex-direction: column
 
 .modal-close
   &__icon
@@ -34,24 +41,28 @@
         fill: #01B68B
 
 .s-modal-header
+  flex: 0 0 auto
   .modal-header
     margin-top: 40px
     padding: 0
     border: none
   .info-text
-    font-size: 42px
     font-weight: 900
     color: #ffffff
     position: relative
     padding-left: 40px
+    margin-bottom: 0
     &__icon
       position: absolute
-      top: 22px
+      top: 12px
       left: 0
+      &_envelope
+        top: 15px
 
 .s-about
   .contact-list, .contact-block
     color: #ffffff
+
 .contact-block
   &__paragraph
     line-height: 20px
@@ -63,12 +74,15 @@
       height: 112px
   &__image
     width: 100%
+
 .contact-list
   padding-left: 0
   list-style-type: none
   &__element
     margin-bottom: 1.5em
     position: relative
+    &_upper
+      text-transform: uppercase
   &__link
     padding-left: 30px
     color: #ffffff
@@ -87,6 +101,25 @@
     &.panel-slack
       top: 2px
 
+.social
+  &-block
+    padding-top: 5px
+  &-list
+    position: relative
+    padding: 20px 0 0
+    margin: 0
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 70px
+      border-top: 2px solid #333333
+    &__item
+      list-style-type: none
+      display: inline-block
+      margin-right: 15px
+
 .s-reviews
   .reviews
     color: #ffffff
@@ -96,6 +129,8 @@
       color: #ffffff
       text-decoration: underline
       display: inline-block
+      position: relative
+      top: -2px
     &-author
       position: relative
       &__wrapper
@@ -113,12 +148,12 @@
       display: flex
       padding: .8em 0 .8em
       flex-wrap: wrap
-      &__img
-        display: inline-block
+      &__link
         margin-right: 10px
         margin-bottom: 10px
-      &__link
-
+      &__img
+        height: 32px
+        width: 32px
   .testimonial
     &__h4
       font-size: 14px
@@ -134,18 +169,58 @@
   margin: .8em 0
   color: #ffffff
 
+@media (max-width: 1200px)
+  .h2
+    font-size: 34px
+  .contact-list
+    &__element
+      &_upper
+       font-size: 15px
+  .s-reviews
+    .reviews
+      &__link
+        font-size: 16px
+
 @media screen and (max-width: 991px)
   .modal-close__icon
     padding: 17px 18px
-
+  .contact
+    &-block
+      &__paragraph
+        &.with-photo
+          height: auto
 
 @media screen and (max-width: 767px)
-  //
-
+  .h1
+    font-size: 32px
+    line-height: 50px
+  .s-modal-header
+    .info-text
+      padding-left: 30px
+      &__icon
+        top: 15px
+        &_envelope
+          top: 18px
 
 @media screen and (max-width: 575px)
-  //
+  .h2
+    font-size: 30px
+  .social
+    &-list
+      &__image
+        height: 40px
+        width: 40px
+        &_facebook
+          height: 22px
+          width: 10px
 
+@media (min-width: 992px)
+  .s-reviews
+    .reviews
+      &-messengers
+        &__img
+          width: 25px
+          height: 25px
 
 
 

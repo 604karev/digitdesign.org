@@ -4,6 +4,7 @@ import './index.sass'
 import Select from 'react-select';
 
 const options = [
+    {value: 'all', label: 'All'},
     {value: 'web-design', label: '#Web design'},
     {value: 'mobile', label: '#Mobile'},
     {value: 'icons', label: '#Icons'},
@@ -14,21 +15,18 @@ const options = [
 const customStyles = {
     option: (provided, state) => ({
         ...provided,
-        borderBottom: '1px dotted pink',
         padding: 10,
+        // backgroundColor: '#100f0f',
+        color: '#ffffff'
     }),
     indicatorSeparator: () => false,
+
 
 };
 
 
 class modalPanelContact extends Component {
 
-
-    handleChange = (selectedOption) => {
-        this.setState({selectedOption});
-        console.log(`Option selected:`, selectedOption);
-    };
 
     render() {
         const {contactIsOpen, toggleModalContact} = this.props;
@@ -55,23 +53,22 @@ class modalPanelContact extends Component {
                                             </svg>
                                         </button>
                                     </div>
-                                    <div className="info-text float-left">
-                                        <svg className="info-text__icon" width="20" height="20" viewBox="0 0 20 20"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path className="i_icon_path"
-                                                  d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 15H9V9H11V15ZM11 7H9V5H11V7Z"
-                                                  fill="white"/>
+                                    <h1 className="info-text float-left h1">
+                                        <svg className="info-text__icon info-text__icon_envelope" width="20" height="16" viewBox="0 0 20 16"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
+                                                fill="white"/>
                                         </svg>
                                         Contact us
-                                    </div>
+                                    </h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div className="section s-contact-us">
-                    <form action="#" className="contact-us">
+                <section className="s-contact-us">
+                    <form action="#" className="contact-us w-100">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-3 col-md-6">
@@ -137,7 +134,7 @@ class modalPanelContact extends Component {
                                                 className="form-control feedback-item__input"
                                                 id="contact"
                                                 type="text"
-                                                placeholder="Email:business@mail.com"
+                                                placeholder="business@mail.com"
                                                 required/>
                                         </div>
                                         <div className="feedback-item">
@@ -146,7 +143,17 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your contact
                                             </label>
                                             <Select
-                                                defaultValue={{value: 'all', label: 'All'}}
+                                                theme={(theme) => {
+                                                    return {
+                                                        ...theme,
+                                                        borderRadius: 0,
+                                                        colors: {
+                                                            primary25: 'rgb(0, 123, 255)',
+                                                            primary: 'rgba(0, 123, 255, 0.25)',
+                                                        },
+                                                    }
+                                                }}
+                                                defaultValue={options[0]}
                                                 styles={customStyles}
                                                 onChange={this.handleChange}
                                                 options={options}
@@ -168,18 +175,20 @@ class modalPanelContact extends Component {
                                             name="contact-us__area"
                                             id="your-question"
                                             cols="30"
-                                            rows="10"
+                                            rows="11"
                                             placeholder="What would you like to ask us? Maybe you have specific suggestions?"
                                         />
                                     </div>
                                 </div>
-                                <div className="col">
-                                    <button type="submit" className="btn btn-light float-right">Send</button>
+                                <div className="col-md-6 offset-md-6 col-lg-3 offset-lg-9">
+                                    <button type="submit" className="btn btn-light float-right w-100 feedback-button">
+                                        Send
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </form>
-                </div>
+                </section>
             </Modal>
         )
     }

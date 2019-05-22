@@ -1,16 +1,18 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchGallery} from 'actions/index'
+import {fetchGallery, fetchReviews} from 'actions/index'
 import * as R from 'ramda'
 import {Link} from 'react-router-dom'
 import './index.sass'
 import Masonry from 'react-masonry-component';
 import {getGallery} from 'selectors';
 
+
 class Gallery extends Component {
 
     componentDidMount = () => {
         this.props.fetchGallery();
+        this.props.fetchReviews()
     };
 
     replaceSymbols = item =>
@@ -37,8 +39,10 @@ class Gallery extends Component {
             </div>
         )
     };
+
     render() {
         const {gallery} = this.props;
+
         return (
             <Masonry
                 className="design-gallery">
@@ -47,12 +51,15 @@ class Gallery extends Component {
         )
     }
 }
+
 const mapStateToProps = (state, ownProps) => ({
     gallery: getGallery(state, ownProps),
+    isLoading: state.galleryPage.isLoading
 });
 
 const mapDispatchToProps = {
-    fetchGallery
+    fetchGallery,
+    fetchReviews
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gallery)

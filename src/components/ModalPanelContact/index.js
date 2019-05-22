@@ -21,12 +21,9 @@ const customStyles = {
     }),
     indicatorSeparator: () => false,
 
-
 };
 
-
 class modalPanelContact extends Component {
-
 
     render() {
         const {contactIsOpen, toggleModalContact} = this.props;
@@ -192,5 +189,5 @@ class modalPanelContact extends Component {
             </Modal>
         )
     }
-};
+}
 export default modalPanelContact

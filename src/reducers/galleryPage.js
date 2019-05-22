@@ -1,7 +1,8 @@
 import * as R from 'ramda'
 import {
     FETCH_GALLERY_START,
-    FETCH_GALLERY_SUCCESS} from "actions/actionsType";
+    FETCH_GALLERY_SUCCESS
+} from "actions/actionsType";
 
 const initialState = {
     ids: [],

@@ -1,0 +1,131 @@
+[
+  {
+    "id": "1",
+    "photo": "../image/author_photo.png",
+    "name": "Sergey Proltavin",
+    "position": "Omega-R Director",
+    "socialNetworks": [
+      {
+        "link": "http://skype.com",
+        "img": "../image/Skype.svg"
+      },
+      {
+        "link": "http://slack.com",
+        "img": "../image/Slack.svg"
+      },
+      {
+        "link": "http://youtube.com",
+        "img": "../image/Youtube.svg"
+      },
+      {
+        "link": "http://linkedin.com",
+        "img": "../image/LinkedIN.svg"
+      },
+      {
+        "link": "http://facebook.com",
+        "img": "../image/Facebook.svg"
+      },
+      {
+        "link": "http://mail.com",
+        "img": "../image/Mail.svg"
+      }
+    ],
+    "originalReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ],
+    "translateReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ]
+  },
+  {
+    "id": "2",
+    "photo": "../image/author_photo.png",
+    "name": "Pavel Lapko",
+    "position": "Websolutions, Director",
+    "socialNetworks": [
+      {
+        "link": "http://skype.com",
+        "img": "../image/Skype.svg"
+      },
+      {
+        "link": "http://slack.com",
+        "img": "../image/Slack.svg"
+      },
+      {
+        "link": "http://linkedin.com",
+        "img": "../image/LinkedIN.svg"
+      },
+      {
+        "link": "http://facebook.com",
+        "img": "../image/Facebook.svg"
+      },
+      {
+        "link": "http://mail.com",
+        "img": "../image/Mail.svg"
+      }
+    ],
+    "originalReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ],
+    "translateReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ]
+  },
+  {
+    "id": "3",
+    "photo": "../image/author_photo.png",
+    "name": "Sergey Proltavin",
+    "position": "Amazon Best Seller",
+    "socialNetworks": [
+
+      {
+        "link": "http://linkedin.com",
+        "img": "../image/LinkedIN.svg"
+      },
+      {
+        "link": "http://facebook.com",
+        "img": "../image/Facebook.svg"
+      },
+      {
+        "link": "http://mail.com",
+        "img": "../image/Mail.svg"
+      }
+    ],
+    "originalReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ],
+    "translateReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ]
+  },
+  {
+    "id": "4",
+    "photo": "../image/author_photo.png",
+    "name": "Sergey Proltavin",
+    "position": "Clickmedia, Director",
+    "socialNetworks": [
+      {
+        "link": "http://skype.com",
+        "img": "../image/Skype.svg"
+      },
+      {
+        "link": "http://mail.com",
+        "img": "../image/Mail.svg"
+      }
+    ],
+    "originalReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ],
+    "translateReview": [
+      "UI, UX, Web design, Graphic design, Illustrations, Banners, Prints, Animation, Presentations, Interfaces, Flash, Corporate Identity, Logo, UI design, Game design, Mobile design",
+      "Adobe Photoshop, Adobe illustrator, Corel Draw, Adobe Animate, Word, Power Point, Zeplin, Figma"
+    ]
+  }
+]

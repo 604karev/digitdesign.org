@@ -27,4 +27,4 @@ export const getGalleryLength = state => R.compose(
     R.values,
 )(state.gallery);
 
-
+export const getReviews = state => R.values(state.reviews);

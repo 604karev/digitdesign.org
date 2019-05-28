@@ -9,14 +9,15 @@ class NavigationButton extends Component {
         contactIsOpen: false
     };
 
-    toggleModalInfo = () => this.setState({infoIsOpen: !this.state.infoIsOpen});
-
-    toggleModalContact = () => this.setState(prevState => ({contactIsOpen: !prevState.contactIsOpen}));
+    toggleModal = (e) => {
+        this.setState({[e.currentTarget.name]: !this.state[e.currentTarget.name]})
+    };
 
     render() {
         return (
             <div className="icons float-right">
-                <button onClick={this.toggleModalContact}
+                <button aria-hidden="true" role="presentation" onClick={this.toggleModal}
+                        name="contactIsOpen"
                         data-toggle="modal"
                         data-target="#contact"
                         className="btn ico-mail ml-3 rounded-0">
@@ -28,8 +29,14 @@ class NavigationButton extends Component {
                             fill="black"/>
                     </svg>
                 </button>
-                <button onClick={this.toggleModalInfo} className="btn ico-slider ml-3 rounded-0" data-toggle="modal"
-                        data-target="#about">
+                <button aria-hidden="true"
+                        role="presentation"
+                        onClick={this.toggleModal}
+                        className="btn ico-slider ml-3 rounded-0"
+                        data-toggle="modal"
+                        data-target="#about"
+                        name="infoIsOpen"
+                >
                     <svg className="ico-slider-svg" width="20" height="20" viewBox="0 0 20 20"
                          fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -40,11 +47,11 @@ class NavigationButton extends Component {
                 </button>
                 <ModalPanelInfo
                     infoIsOpen={this.state.infoIsOpen}
-                    toggleModalInfo={this.toggleModalInfo}
+                    toggleModal={this.toggleModal}
                 />
                 <ModalPanelContact
                     contactIsOpen={this.state.contactIsOpen}
-                    toggleModalContact={this.toggleModalContact}
+                    toggleModal={this.toggleModal}
                 />
             </div>
         )

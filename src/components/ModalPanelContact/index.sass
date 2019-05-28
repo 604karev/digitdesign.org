@@ -41,28 +41,46 @@
     border: none
     border-radius: 0
     cursor: pointer
-  .css-21bt51-control
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+  .css-ov2s4s-control
+    box-shadow: 0 0 0 0.2rem rgba(1,182,139, 0.25)
+    border: none
   .css-19zip5s-singleValue
     color: #ffffff
     opacity: .4
     margin-left: 8px
   .css-azhrpj-menu
     background-color: #100f0f
+    top: auto
+    bottom: 100%
   .css-11unzgr
     & > div
       cursor: pointer
+  .css-1qrztzz-option
+    background-color: #100f0f
+    color: #01B68B
+  .caret-down
+    transform: rotate(-180deg)
+  .caret-up
+    transform: rotate(0deg)
   &-button
     margin: 30px auto
     border-radius: 0
     text-transform: uppercase
     padding: 10px 0
+    background-color: #fff
+    &:hover
+      background-color: #fff
+      color: #01B68B
+
+.form-control:focus
+  box-shadow: 0 0 0 0.2rem rgba(1,182,139, 0.25)
 
 @media (max-width: 991px)
   .feedback
     &-item
       &__select
         margin-bottom: 20px
+
 
 @media (min-width: 992px)
   .feedback

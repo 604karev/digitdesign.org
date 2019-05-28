@@ -46,13 +46,12 @@ class SlideOut extends React.Component {
         };
 
         if ((prevUniqId > uniqId && !(prevUniqId === galleryLength && uniqId === 1)) || (prevUniqId === 1 && uniqId === galleryLength)) {
-            setDirectionState(Slider.TO_LEFT, () => this.swapChildren(Slider.FROM_RIGHT))
-        }
-        if ((prevUniqId < uniqId && !(prevUniqId === 1 && uniqId === galleryLength)) || (prevUniqId === galleryLength && uniqId === 1)) {
             setDirectionState(Slider.TO_RIGHT, () => this.swapChildren(Slider.FROM_LEFT))
         }
+        if ((prevUniqId < uniqId && !(prevUniqId === 1 && uniqId === galleryLength)) || (prevUniqId === galleryLength && uniqId === 1)) {
+            setDirectionState(Slider.TO_LEFT, () => this.swapChildren(Slider.FROM_RIGHT))
+        }
     };
-
 
     render() {
         return (

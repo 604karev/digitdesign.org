@@ -1,4 +1,15 @@
-
+@import "node_modules/bootstrap/scss/_functions.scss"
+@import "node_modules/bootstrap/scss/_variables.scss"
+@import "node_modules/bootstrap/scss/_mixins.scss"
+@import "node_modules/bootstrap/scss/_reboot.scss"
+@import "node_modules/bootstrap/scss/_type.scss"
+@import "node_modules/bootstrap/scss/_grid.scss"
+@import "node_modules/bootstrap/scss/_forms.scss"
+@import "node_modules/bootstrap/scss/_buttons.scss"
+@import "node_modules/bootstrap/scss/_transitions.scss"
+@import "node_modules/bootstrap/scss/_media.scss"
+@import "node_modules/bootstrap/scss/_modal.scss"
+@import "node_modules/bootstrap/scss/_utilities.scss"
 
 body
   margin: 0
@@ -26,13 +37,20 @@ body
   color: #fff
   opacity: 1
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #fff
+*:focus
+  outline-color: rgb(1, 182, 139)
 
-body input:required:valid,
-body textarea:required:valid
-  color: #fff
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder
+  color: transparent
+
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder
+  color: transparent
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder
+  color: transparent
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder
+  color: transparent
 
 html, body
   min-height: 100%

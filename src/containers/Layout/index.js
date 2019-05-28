@@ -9,15 +9,17 @@ const Layout = ({children}) => {
             <Navigation>
                 <NavigationLinksWrapper/>
             </Navigation>
-            <section className="s-gallery">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col p-0">
-                            {children}
+            <main className="page-main">
+                <section className="s-gallery">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col p-0">
+                                {children}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </main>
         </div>
     )
 };

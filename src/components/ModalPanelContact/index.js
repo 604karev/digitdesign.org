@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {Modal} from 'reactstrap'
 import './index.sass'
-import Select from 'react-select';
+import Select, {components} from 'react-select';
+
 
 const options = [
     {value: 'all', label: 'All'},
@@ -11,12 +12,24 @@ const options = [
     {value: 'identity', label: '#Identity'},
     {value: 'art', label: '#Art'}
 ];
+const DropdownIndicator = props => {
+    return (
+        components.DropdownIndicator && (
+            <components.DropdownIndicator {...props}>
+                <svg className={props.selectProps.menuIsOpen ? "caret caret-up" : "caret caret-down"} width="10" height="5"
+                     viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 5L5 5.96244e-08L0 5L10 5Z" fill="white"/>
+                </svg>
+
+            </components.DropdownIndicator>
+        )
+    );
+};
 
 const customStyles = {
     option: (provided, state) => ({
         ...provided,
         padding: 10,
-        // backgroundColor: '#100f0f',
         color: '#ffffff'
     }),
     indicatorSeparator: () => false,
@@ -26,7 +39,7 @@ const customStyles = {
 class modalPanelContact extends Component {
 
     render() {
-        const {contactIsOpen, toggleModalContact} = this.props;
+        const {contactIsOpen, toggleModal} = this.props;
 
         return (
             <Modal className="modal-window" isOpen={contactIsOpen} id="contactModal" fade>
@@ -36,9 +49,11 @@ class modalPanelContact extends Component {
                             <div className="row">
                                 <div className="col">
                                     <div className="modal-close float-right">
-                                        <button onClick={toggleModalContact} data-dismiss="modal"
+                                        <button onClick={toggleModal}
+                                                data-dismiss="modal"
                                                 data-target="#contactModal"
                                                 className="btn modal-close__icon"
+                                                name="contactIsOpen"
                                         >
                                             <svg className="modal-close__svg" width="14" height="14"
                                                  viewBox="0 0 14 14"
@@ -51,7 +66,8 @@ class modalPanelContact extends Component {
                                         </button>
                                     </div>
                                     <h1 className="info-text float-left h1">
-                                        <svg className="info-text__icon info-text__icon_envelope" width="20" height="16" viewBox="0 0 20 16"
+                                        <svg className="info-text__icon info-text__icon_envelope" width="20" height="16"
+                                             viewBox="0 0 20 16"
                                              fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
@@ -140,13 +156,14 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your contact
                                             </label>
                                             <Select
+                                                components={{DropdownIndicator}}
                                                 theme={(theme) => {
                                                     return {
                                                         ...theme,
                                                         borderRadius: 0,
                                                         colors: {
-                                                            primary25: 'rgb(0, 123, 255)',
-                                                            primary: 'rgba(0, 123, 255, 0.25)',
+                                                            primary25: '#01B68B',
+                                                            primary: '#01B68B',
                                                         },
                                                     }
                                                 }}
@@ -190,4 +207,5 @@ class modalPanelContact extends Component {
         )
     }
 }
+
 export default modalPanelContact

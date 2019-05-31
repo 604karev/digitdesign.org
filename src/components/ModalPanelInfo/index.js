@@ -25,7 +25,7 @@ const ModalPanelInfo = ({infoIsOpen, toggleModal, reviews}) => {
         );
 
         return (
-            <div key={review.id} className="col-md-6 col-lg-3 py-3 px-xl-2">
+            <div className="review">
                 <div className="reviews-author">
                     <img className="reviews-author__image float-left" src={review.photo}
                          alt="author_foto"/>
@@ -258,11 +258,24 @@ const ModalPanelInfo = ({infoIsOpen, toggleModal, reviews}) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12 px-xl-2">
-                                <h2 className="reviews__h2 h2">Reviews <a className="reviews__link"
-                                                                          href="https://www.facebook.com/pg/digitdesign.org/reviews/?referrer=page_recommendations_see_all&ref=page_internal">See
-                                    more on FB</a></h2>
+                                <h2 className="reviews__h2 h2">Reviews
+                                    <a className="reviews__link"
+                                       href="https://www.facebook.com/pg/digitdesign.org/reviews/?referrer=page_recommendations_see_all&ref=page_internal">
+                                        Seemoreon FB
+                                    </a>
+                                </h2>
                             </div>
-                            {reviews.map(item => renderReviews(item))}
+                            {reviews.length % 3 === 0 ? reviews.map(item => <div
+                                    key={item.id}
+                                    className="col-md-6 col-lg-4 py-3 px-xl-2">
+                                    {renderReviews(item)}
+                                </div>)
+                                : reviews.map(item =>
+                                    <div
+                                        key={item.id}
+                                        className="col-md-6 col-lg-3 py-3 px-xl-2">
+                                        {renderReviews(item)}
+                                    </div>)}
                         </div>
                     </div>
                 </div>

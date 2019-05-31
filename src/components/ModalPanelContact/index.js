@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Modal} from 'reactstrap'
 import './index.sass'
 import Select, {components} from 'react-select';
-
+import * as email from 'emailjs-com'
 
 const options = [
     {value: 'all', label: 'All'},
@@ -16,7 +16,8 @@ const DropdownIndicator = props => {
     return (
         components.DropdownIndicator && (
             <components.DropdownIndicator {...props}>
-                <svg className={props.selectProps.menuIsOpen ? "caret caret-up" : "caret caret-down"} width="10" height="5"
+                <svg className={props.selectProps.menuIsOpen ? "caret caret-up" : "caret caret-down"} width="10"
+                     height="5"
                      viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 5L5 5.96244e-08L0 5L10 5Z" fill="white"/>
                 </svg>
@@ -38,8 +39,40 @@ const customStyles = {
 
 class modalPanelContact extends Component {
 
+    state = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    };
+
+    handleChange = (e) => this.setState({[e.target.name]: e.target.value});
+
+    handleChangeSelect = (e) => this.setState({subject: e.value});
+
+    handleSubmit = (e) => {
+
+        const templateParams = {
+            from_name: `${this.state.name}(${this.state.email})`,
+            to_name: 'digitdd@gmail.com',
+            name: this.state.name,
+            subject: this.state.subject,
+            message_html: this.state.message
+        };
+
+        e.preventDefault();
+        console.log(this.state);
+        email.send('gmail', 'template_6QwMgsdR', templateParams, 'user_O0R69LedaqEOPpYZjWvgO')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+                console.log('FAILED...', err);
+            });
+    };
+
     render() {
         const {contactIsOpen, toggleModal} = this.props;
+
 
         return (
             <Modal className="modal-window" isOpen={contactIsOpen} id="contactModal" fade>
@@ -81,7 +114,7 @@ class modalPanelContact extends Component {
                     </div>
                 </section>
                 <section className="s-contact-us">
-                    <form action="#" className="contact-us w-100">
+                    <form id="contacts" className="contact-us w-100">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-3 col-md-6">
@@ -132,8 +165,10 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your name
                                             </label>
                                             <input
+                                                onChange={this.handleChange}
                                                 className="form-control feedback-item__input"
                                                 id="name"
+                                                name="name"
                                                 type="text"
                                                 placeholder="How can I call you"
                                                 required/>
@@ -144,8 +179,10 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your contact
                                             </label>
                                             <input
+                                                onChange={this.handleChange}
                                                 className="form-control feedback-item__input"
                                                 id="contact"
+                                                name="email"
                                                 type="text"
                                                 placeholder="business@mail.com"
                                                 required/>
@@ -169,11 +206,11 @@ class modalPanelContact extends Component {
                                                 }}
                                                 defaultValue={options[0]}
                                                 styles={customStyles}
-                                                onChange={this.handleChange}
+                                                onChange={this.handleChangeSelect}
                                                 options={options}
                                                 className="feedback-item__select"
-                                                name="category"
-                                                id="category"
+                                                name="subject"
+                                                id="subject"
                                             />
 
                                         </div>
@@ -185,8 +222,9 @@ class modalPanelContact extends Component {
                                         <label htmlFor="your-question" className="feedback-item__label">Your
                                             question</label>
                                         <textarea
+                                            onChange={this.handleChange}
                                             className="form-control feedback-item__area w-100"
-                                            name="contact-us__area"
+                                            name="message"
                                             id="your-question"
                                             cols="30"
                                             rows="11"
@@ -195,7 +233,11 @@ class modalPanelContact extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-6 offset-md-6 col-lg-3 offset-lg-9">
-                                    <button type="submit" className="btn btn-light float-right w-100 feedback-button">
+                                    <button
+                                        onClick={this.handleSubmit}
+                                        type="submit"
+                                        className="btn btn-light float-right w-100 feedback-button"
+                                    >
                                         Send
                                     </button>
                                 </div>

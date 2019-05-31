@@ -3,6 +3,9 @@ import {Modal} from 'reactstrap'
 import './index.sass'
 import Select, {components} from 'react-select';
 import * as email from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+
 
 const options = [
     {value: 'all', label: 'All'},
@@ -39,6 +42,8 @@ const customStyles = {
 
 class modalPanelContact extends Component {
 
+    notify = () => toast("Message send successfully!");
+
     state = {
         name: '',
         email: '',
@@ -62,9 +67,12 @@ class modalPanelContact extends Component {
 
         e.preventDefault();
         console.log(this.state);
+
         email.send('gmail', 'template_6QwMgsdR', templateParams, 'user_O0R69LedaqEOPpYZjWvgO')
             .then((response) => {
+                this.notify();
                 console.log('SUCCESS!', response.status, response.text);
+
             }, (err) => {
                 console.log('FAILED...', err);
             });
@@ -72,10 +80,12 @@ class modalPanelContact extends Component {
 
     render() {
         const {contactIsOpen, toggleModal} = this.props;
-
-
         return (
             <Modal className="modal-window" isOpen={contactIsOpen} id="contactModal" fade>
+                <ToastContainer
+                    toastClassName="green-toast"
+                    progressClassName='progress'
+                    />
                 <section className="s-modal-header">
                     <div className="modal-header">
                         <div className="container">

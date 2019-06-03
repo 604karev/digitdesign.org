@@ -3,7 +3,7 @@ import {Modal} from 'reactstrap'
 import './index.sass'
 import Select, {components} from 'react-select';
 import * as email from 'emailjs-com'
-import { ToastContainer, toast } from 'react-toastify';
+import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 
@@ -56,6 +56,7 @@ class modalPanelContact extends Component {
     handleChangeSelect = (e) => this.setState({subject: e.value});
 
     handleSubmit = (e) => {
+        e.preventDefault();
 
         const templateParams = {
             from_name: `${this.state.name}(${this.state.email})`,
@@ -64,10 +65,7 @@ class modalPanelContact extends Component {
             subject: this.state.subject,
             message_html: this.state.message
         };
-
-        e.preventDefault();
         console.log(this.state);
-
         email.send('gmail', 'template_6QwMgsdR', templateParams, 'user_O0R69LedaqEOPpYZjWvgO')
             .then((response) => {
                 this.notify();
@@ -76,6 +74,11 @@ class modalPanelContact extends Component {
             }, (err) => {
                 console.log('FAILED...', err);
             });
+        this.setState({
+            name: '',
+            email: '',
+            message: ''
+        })
     };
 
     render() {
@@ -85,7 +88,7 @@ class modalPanelContact extends Component {
                 <ToastContainer
                     toastClassName="green-toast"
                     progressClassName='progress'
-                    />
+                />
                 <section className="s-modal-header">
                     <div className="modal-header">
                         <div className="container">
@@ -124,7 +127,7 @@ class modalPanelContact extends Component {
                     </div>
                 </section>
                 <section className="s-contact-us">
-                    <form id="contacts" className="contact-us w-100">
+                    <form id="contacts" className="contact-us w-100" onSubmit={this.handleSubmit}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-3 col-md-6">
@@ -175,6 +178,7 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your name
                                             </label>
                                             <input
+                                                value={this.state.name}
                                                 onChange={this.handleChange}
                                                 className="form-control feedback-item__input"
                                                 id="name"
@@ -182,6 +186,7 @@ class modalPanelContact extends Component {
                                                 type="text"
                                                 placeholder="How can I call you"
                                                 required/>
+
                                         </div>
                                         <div className="feedback-item">
                                             <label
@@ -189,6 +194,7 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your contact
                                             </label>
                                             <input
+                                                value={this.state.email}
                                                 onChange={this.handleChange}
                                                 className="form-control feedback-item__input"
                                                 id="contact"
@@ -232,6 +238,7 @@ class modalPanelContact extends Component {
                                         <label htmlFor="your-question" className="feedback-item__label">Your
                                             question</label>
                                         <textarea
+                                            value={this.state.message}
                                             onChange={this.handleChange}
                                             className="form-control feedback-item__area w-100"
                                             name="message"
@@ -244,7 +251,6 @@ class modalPanelContact extends Component {
                                 </div>
                                 <div className="col-md-6 offset-md-6 col-lg-3 offset-lg-9">
                                     <button
-                                        onClick={this.handleSubmit}
                                         type="submit"
                                         className="btn btn-light float-right w-100 feedback-button"
                                     >

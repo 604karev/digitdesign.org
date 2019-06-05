@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import {Modal} from 'reactstrap'
 import './index.sass'
 import Select, {components} from 'react-select';
-import * as email from 'emailjs-com'
-import {ToastContainer, toast} from 'react-toastify';
+import {sendMessage} from 'actions';
+import {connect} from 'react-redux'
+import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 
@@ -42,8 +43,6 @@ const customStyles = {
 
 class modalPanelContact extends Component {
 
-    notify = () => toast("Message send successfully!");
-
     state = {
         name: '',
         email: '',
@@ -57,32 +56,14 @@ class modalPanelContact extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-
-        const templateParams = {
-            from_name: `${this.state.name}(${this.state.email})`,
-            to_name: 'digitdd@gmail.com',
-            name: this.state.name,
-            subject: this.state.subject,
-            message_html: this.state.message
-        };
-        console.log(this.state);
-        email.send('gmail', 'template_6QwMgsdR', templateParams, 'user_O0R69LedaqEOPpYZjWvgO')
-            .then((response) => {
-                this.notify();
-                console.log('SUCCESS!', response.status, response.text);
-
-            }, (err) => {
-                console.log('FAILED...', err);
-            });
-        this.setState({
-            name: '',
-            email: '',
-            message: ''
-        })
+        const {sendMessage} = this.props;
+        sendMessage(this.state);
     };
+
 
     render() {
         const {contactIsOpen, toggleModal} = this.props;
+
         return (
             <Modal className="modal-window" isOpen={contactIsOpen} id="contactModal" fade>
                 <ToastContainer
@@ -178,7 +159,7 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your name
                                             </label>
                                             <input
-                                                value={this.state.name}
+
                                                 onChange={this.handleChange}
                                                 className="form-control feedback-item__input"
                                                 id="name"
@@ -194,7 +175,6 @@ class modalPanelContact extends Component {
                                                 className="feedback-item__label">Your contact
                                             </label>
                                             <input
-                                                value={this.state.email}
                                                 onChange={this.handleChange}
                                                 className="form-control feedback-item__input"
                                                 id="contact"
@@ -238,7 +218,6 @@ class modalPanelContact extends Component {
                                         <label htmlFor="your-question" className="feedback-item__label">Your
                                             question</label>
                                         <textarea
-                                            value={this.state.message}
                                             onChange={this.handleChange}
                                             className="form-control feedback-item__area w-100"
                                             name="message"
@@ -266,4 +245,8 @@ class modalPanelContact extends Component {
     }
 }
 
-export default modalPanelContact
+const mapDispatchToProps = {
+    sendMessage
+};
+
+export default connect(null, mapDispatchToProps)(modalPanelContact)

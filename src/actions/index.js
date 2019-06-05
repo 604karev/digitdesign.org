@@ -1,4 +1,4 @@
-import {fetchGalleryApi, fetchItemByIdApi, fetchReviewsApi} from 'api'
+import {fetchGalleryApi, fetchItemByIdApi, fetchReviewsApi, sendMessageApi} from 'api'
 import {
     FETCH_GALLERY_FAILURE,
     FETCH_GALLERY_START,
@@ -9,8 +9,19 @@ import {
     TOGGLE_MOBILE_MENU,
     FETCH_REVIEWS_FAILURE,
     FETCH_REVIEWS_START,
-    FETCH_REVIEWS_SUCCESS
+    FETCH_REVIEWS_SUCCESS,
+    SEND_MESSAGE_START,
+    SEND_MESSAGE_SUCCESS,
+    SEND_MESSAGE_FAILURE
 } from "actions/actionsType";
+import {toast} from 'react-toastify';
+
+const success = () => toast("Message send successfully!");
+const error = () => toast("Error sending message", {
+        className: 'red-background'
+    }
+);
+
 
 export const fetchGallery = () => async dispatch => {
 
@@ -44,7 +55,8 @@ export const fetchItemById = (id) => async dispatch => {
             type: FETCH_ITEM_BY_ID_SUCCESS,
             payload: item,
             id: id
-        })
+        });
+
     }
     catch (err) {
         dispatch({
@@ -78,5 +90,31 @@ export const fetchReviews = () => async dispatch => {
             error: true,
             isLoading: false
         })
+    }
+};
+
+export const sendMessage = (data) => async dispatch => {
+    dispatch({
+        type: SEND_MESSAGE_START
+    });
+    try {
+        const response = await sendMessageApi(data);
+        dispatch({
+            type: SEND_MESSAGE_SUCCESS,
+            payload: response,
+            isSent: true
+
+        });
+        success();
+
+    }
+    catch (err) {
+        dispatch({
+            type: SEND_MESSAGE_FAILURE,
+            payload: err,
+            isSent: false
+        });
+        error();
+
     }
 };

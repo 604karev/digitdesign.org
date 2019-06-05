@@ -10,6 +10,9 @@
         .design-gallery__overlay
           opacity: 1
           transition: opacity .5s ease
+          &:before
+            transform: scale(3,3)
+
     &__overlay
       position: absolute
       top: 0
@@ -37,6 +40,7 @@
         left: 0
         bottom: 0
         margin: auto
+        transition: transform .3s linear
       .element-category
         padding-left: 15px
         padding-top: 5px

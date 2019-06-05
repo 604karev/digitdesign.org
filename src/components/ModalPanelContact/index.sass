@@ -42,11 +42,14 @@
     border-radius: 0
     cursor: pointer
   .css-ov2s4s-control
-    box-shadow: 0 0 0 0.2rem rgba(1,182,139, 0.25)
     border: none
+    box-shadow: none
+    background-color: #100f0f
+    &:hover
+      border: none
+
   .css-19zip5s-singleValue
     color: #ffffff
-    opacity: .4
     margin-left: 8px
   .css-azhrpj-menu
     background-color: #100f0f
@@ -71,9 +74,11 @@
     &:hover
       background-color: #fff
       color: #01B68B
-
-.form-control:focus
-  box-shadow: 0 0 0 0.2rem rgba(1,182,139, 0.25)
+.feedback-item
+  .form-control
+    color: #fff
+    &:focus
+      box-shadow: none
 
 @media (max-width: 991px)
   .feedback

@@ -1,11 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './NavigationSlider.sass'
 
 const NavigationSlider = () => {
     return (
         <div className="nav-bar-wrapper mobile h-100 float-left">
             <div className="nav-bar-list__element">
                 <Link to="/" className="nav-bar-list__item all">
+                    <svg className="nav-bar-list__back" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 10L9.36827 0.631731V10V19.3683L0 10Z" fill="black"/>
+                    </svg>
+
                     <svg width="66" height="29" viewBox="0 0 66 29" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path

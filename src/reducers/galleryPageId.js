@@ -10,7 +10,7 @@ const initialState = {
     isLoading: false
 };
 
-export default (state = initialState, {type, payload, id}) => {
+export default (state = initialState, {type, id}) => {
     switch (type) {
         case FETCH_ITEM_BY_ID_START:
             return R.merge(state, {isLoading: true});

@@ -4,6 +4,13 @@ import './index.sass';
 import App from './App';
 import 'babel-polyfill';
 import "isomorphic-fetch";
+import WebFont from 'webfontloader';
+
+WebFont.load({
+    google: {
+        families: ['Montserrat:300,400,400i,700,900', 'sans-serif']
+    }
+});
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

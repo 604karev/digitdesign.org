@@ -3,7 +3,7 @@ import {Switch, Route} from "react-router-dom";
 import Slider from "./index";
 import * as R from 'ramda'
 import {connect} from 'react-redux'
-import {getGalleryLength} from 'selectors'
+
 
 class SlideOut extends React.Component {
     constructor(props) {
@@ -27,7 +27,10 @@ class SlideOut extends React.Component {
         });
     };
     componentDidUpdate = (prevProps, prevState) => {
-        const {galleryLength} = this.props;
+        const {gallery} = this.props;
+        const keys = Object.keys(gallery);
+        const lastGalleryIndex = Number(keys[keys.length - 1]);
+
         const pathToNumber = (path) => (
             Number(R.replace('/carousel/', '', path))
         );
@@ -45,10 +48,10 @@ class SlideOut extends React.Component {
             });
         };
 
-        if ((prevUniqId > uniqId && !(prevUniqId === galleryLength && uniqId === 1)) || (prevUniqId === 1 && uniqId === galleryLength)) {
+        if ((prevUniqId > uniqId && !(prevUniqId === lastGalleryIndex && uniqId === 1)) || (prevUniqId === 1 && uniqId === lastGalleryIndex)) {
             setDirectionState(Slider.TO_LEFT, () => this.swapChildren(Slider.FROM_RIGHT))
         }
-        if ((prevUniqId < uniqId && !(prevUniqId === 1 && uniqId === galleryLength)) || (prevUniqId === galleryLength && uniqId === 1)) {
+        if ((prevUniqId < uniqId && !(prevUniqId === 1 && uniqId === lastGalleryIndex)) || (prevUniqId === lastGalleryIndex && uniqId === 1)) {
             setDirectionState(Slider.TO_RIGHT, () => this.swapChildren(Slider.FROM_LEFT))
         }
     };
@@ -75,7 +78,7 @@ const animateSwitch = (CustomSwitch, AnimatorComponent) => ({updateStep, childre
     />
 );
 const mapStateToProps = (state) => ({
-    galleryLength: getGalleryLength(state)
+    gallery: state.gallery
 });
 const SwitchWithSlide = animateSwitch(Switch, connect(mapStateToProps)(SlideOut));
 

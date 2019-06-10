@@ -2,6 +2,10 @@ import * as R from 'ramda'
 
 export const getGalleryItemById = (state, id) => R.prop(id, state.gallery);
 
+export const getItemByIndex = (state, id) => {
+   return  R.values(state.gallery)[id];
+}
+
 export const getGallery = (state, ownProps) => {
     const activeCategory = getActiveCategory(ownProps);
     const applyCategory = array => R.prop('category', array).some(
@@ -22,9 +26,5 @@ export const getActiveCategory = ownProps => {
     return R.path(['match', 'params', 'category'], ownProps)
 };
 
-export const getGalleryLength = state => R.compose(
-    R.length,
-    R.values,
-)(state.gallery);
 
 export const getReviews = state => R.values(state.reviews);

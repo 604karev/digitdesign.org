@@ -42,21 +42,7 @@
       "../image/carousel/sto08.png"
     ]
   },
-  {
-    "img": "./image/index/kp_i.png",
-    "id": 39,
-    "category": [
-      "web-design"
-    ],
-    "categoryLink": "web-design",
-    "portfolioImg": [
-      "../image/carousel/kp01.png",
-      "../image/carousel/kp02.png",
-      "../image/carousel/kp03.png",
-      "../image/carousel/kp04.gif",
-      "../image/carousel/kp05.png"
-    ]
-  },
+
   {
     "img": "./image/index/rider01_i.jpg",
     "id": 38,
